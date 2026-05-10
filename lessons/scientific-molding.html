@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Scientific Molding</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Scientific Molding</h1>
+
+        <p>
+            Learn how to use data, process studies, and controlled methods
+            to build repeatable injection molding processes.
+        </p>
+
+    </header>
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="lesson-layout">
+
+        <!-- SCIENTIFIC MOLDING TOPICS -->
+
+        <section class="card">
+
+            <h2>Scientific Molding Topics</h2>
+
+            <p>
+                Select a topic below to begin training.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showScientific('overview')">
+                    Scientific Molding Overview
+                </button>
+
+                <button onclick="showScientific('decoupled')">
+                    Decoupled Molding
+                </button>
+
+                <button onclick="showScientific('fillonly')">
+                    Fill-Only Study
+                </button>
+
+                <button onclick="showScientific('viscosity')">
+                    Viscosity Curve
+                </button>
+
+                <button onclick="showScientific('pressureloss')">
+                    Pressure Loss Study
+                </button>
+
+                <button onclick="showScientific('cavitybalance')">
+                    Cavity Balance
+                </button>
+
+                <button onclick="showScientific('gatefreeze')">
+                    Gate Freeze Study
+                </button>
+
+                <button onclick="showScientific('cushion')">
+                    Cushion Control
+                </button>
+
+                <button onclick="showScientific('partweight')">
+                    Part Weight Study
+                </button>
+
+                <button onclick="showScientific('processwindow')">
+                    Process Window
+                </button>
+
+                <button onclick="showScientific('monitoring')">
+                    Process Monitoring
+                </button>
+
+                <button onclick="showScientific('documentation')">
+                    Documentation
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- SCIENTIFIC MOLDING INFORMATION -->
+
+        <section class="card">
+
+            <h2>Scientific Molding Information</h2>
+
+            <div id="scientificBox">
+
+                <p>
+                    Select a scientific molding topic to begin training.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETE LESSON -->
+
+        <section class="card">
+
+            <button onclick="markLessonComplete('scientific-molding')">
+
+                Mark Scientific Molding Complete
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="scientific-molding.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>

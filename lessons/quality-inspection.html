@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Quality & Inspection</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Quality & Inspection</h1>
+
+        <p>
+            Learn how to inspect molded parts, monitor quality,
+            document defects, and support production decisions.
+        </p>
+
+    </header>
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="lesson-layout">
+
+        <!-- QUALITY TOPICS -->
+
+        <section class="card">
+
+            <h2>Quality & Inspection Topics</h2>
+
+            <p>
+                Select a quality topic below to begin training.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showQuality('overview')">
+                    Quality Overview
+                </button>
+
+                <button onclick="showQuality('firstpiece')">
+                    First-Piece Inspection
+                </button>
+
+                <button onclick="showQuality('visual')">
+                    Visual Inspection
+                </button>
+
+                <button onclick="showQuality('dimensions')">
+                    Dimensional Checks
+                </button>
+
+                <button onclick="showQuality('gauges')">
+                    Gauges & Measuring Tools
+                </button>
+
+                <button onclick="showQuality('partweight')">
+                    Part Weight Tracking
+                </button>
+
+                <button onclick="showQuality('samples')">
+                    Approved Samples
+                </button>
+
+                <button onclick="showQuality('defects')">
+                    Defect Documentation
+                </button>
+
+                <button onclick="showQuality('controlplan')">
+                    Control Plans
+                </button>
+
+                <button onclick="showQuality('alerts')">
+                    Quality Alerts
+                </button>
+
+                <button onclick="showQuality('containment')">
+                    Containment
+                </button>
+
+                <button onclick="showQuality('rootcause')">
+                    Root Cause Thinking
+                </button>
+
+                <button onclick="showQuality('handoff')">
+                    Shift Handoff
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- QUALITY INFORMATION -->
+
+        <section class="card">
+
+            <h2>Quality Information</h2>
+
+            <div id="qualityBox">
+
+                <p>
+                    Select a quality topic to begin training.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETE LESSON -->
+
+        <section class="card">
+
+            <button onclick="markLessonComplete('quality-inspection')">
+
+                Mark Quality & Inspection Complete
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="quality-inspection.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>
