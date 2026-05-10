@@ -3,6 +3,8 @@ const lessons = [
     "processing-parameters",
     "troubleshooting",
     "materials",
+    "mold-setup",
+    "scientific-molding",
     "advanced-lessons",
     "troubleshooting-quiz"
 ];
