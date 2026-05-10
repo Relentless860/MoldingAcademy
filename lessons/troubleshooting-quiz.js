@@ -12,11 +12,11 @@ const quizData = {
             ],
             correct: "To store and feed resin into the barrel",
             explanation:
-                "The hopper holds plastic pellets and feeds them into the barrel."
+                "The hopper stores plastic pellets and feeds them into the barrel."
         },
 
         {
-            question: "Which machine component melts and transports plastic through the barrel?",
+            question: "Which component conveys, compresses, melts, mixes, meters, and injects plastic?",
             answers: [
                 "Screw",
                 "Platen",
@@ -25,111 +25,20 @@ const quizData = {
             ],
             correct: "Screw",
             explanation:
-                "The screw conveys, compresses, melts, mixes, meters, and injects plastic."
+                "The screw moves material through the barrel and prepares the shot."
         },
 
         {
-            question: "What does the barrel do?",
+            question: "What does the clamp unit do?",
             answers: [
-                "Heats and helps melt the resin",
-                "Closes the mold",
-                "Removes parts from the tool",
-                "Controls water flow"
+                "Keeps the mold closed during injection",
+                "Dries the material",
+                "Controls colorant ratio",
+                "Removes moisture from resin"
             ],
-            correct: "Heats and helps melt the resin",
+            correct: "Keeps the mold closed during injection",
             explanation:
-                "The barrel uses heater bands and works with screw shear to melt plastic."
-        },
-
-        {
-            question: "What can happen if the nozzle is too cold?",
-            answers: [
-                "Restricted flow or freeze-off",
-                "Too much clamp force",
-                "Excessive cooling water",
-                "Ejector return failure"
-            ],
-            correct: "Restricted flow or freeze-off",
-            explanation:
-                "A cold nozzle can restrict material flow and cause freeze-off."
-        },
-
-        {
-            question: "What is the main job of the clamp unit?",
-            answers: [
-                "Keep the mold closed during injection",
-                "Dry the material",
-                "Mix colorant",
-                "Measure part weight"
-            ],
-            correct: "Keep the mold closed during injection",
-            explanation:
-                "The clamp unit closes the mold and applies force to resist cavity pressure."
-        },
-
-        {
-            question: "What does the ejector system do?",
-            answers: [
-                "Removes the finished part from the mold",
-                "Controls melt temperature",
-                "Feeds resin into the barrel",
-                "Applies back pressure"
-            ],
-            correct: "Removes the finished part from the mold",
-            explanation:
-                "The ejector system pushes or assists the part out of the mold after cooling."
-        },
-
-        {
-            question: "During which cycle stage is molten plastic pushed into the cavity?",
-            answers: [
-                "Injection",
-                "Cooling",
-                "Ejection",
-                "Screw recovery"
-            ],
-            correct: "Injection",
-            explanation:
-                "During injection, the screw moves forward and fills the cavity with molten plastic."
-        },
-
-        {
-            question: "What is the purpose of pack and hold?",
-            answers: [
-                "Compensate for material shrinkage",
-                "Open the mold",
-                "Dry the resin",
-                "Clean the hopper"
-            ],
-            correct: "Compensate for material shrinkage",
-            explanation:
-                "Pack and hold pressure pushes additional material into the cavity as the part shrinks."
-        },
-
-        {
-            question: "What can happen if cooling time is too short?",
-            answers: [
-                "Warping or sticking",
-                "Better dimensional stability",
-                "Reduced internal stress",
-                "Longer cycle time"
-            ],
-            correct: "Warping or sticking",
-            explanation:
-                "If the part is not solid enough before ejection, it can warp, deform, or stick."
-        },
-
-        {
-            question: "What is mold protection designed to prevent?",
-            answers: [
-                "Mold damage during closing",
-                "Material drying",
-                "Shot size changes",
-                "Color streaking"
-            ],
-            correct: "Mold damage during closing",
-            explanation:
-                "Mold protection uses low-pressure closing to detect stuck parts or obstructions."
+                "Clamp force keeps the mold closed against cavity pressure."
         },
 
         {
@@ -137,64 +46,51 @@ const quizData = {
             answers: [
                 "Flash",
                 "Splay",
-                "Moisture absorption",
-                "Low screw RPM"
+                "Low screw RPM",
+                "Material drying"
             ],
             correct: "Flash",
             explanation:
-                "If clamp force is too low, cavity pressure can force the mold open and create flash."
+                "Low clamp force can allow the mold to open slightly and create flash."
         },
 
         {
-            question: "What can too much clamp tonnage cause?",
+            question: "What is mold protection designed to prevent?",
             answers: [
-                "Vent crushing and mold stress",
-                "Short cooling time",
-                "Wet material",
-                "Nozzle freeze-off only"
+                "Mold damage during closing",
+                "Color changes",
+                "Material drying",
+                "Shot size changes"
             ],
-            correct: "Vent crushing and mold stress",
+            correct: "Mold damage during closing",
             explanation:
-                "Excessive clamp force can crush vents, stress tooling, and damage the parting line."
+                "Mold protection detects obstructions before full clamp force is applied."
         },
 
         {
-            question: "What do tie bars and platens help maintain?",
+            question: "What happens during pack and hold?",
             answers: [
-                "Mold alignment and clamp force distribution",
-                "Material drying time",
-                "Resin color",
-                "Part weight only"
+                "Material is packed into the part to compensate for shrinkage",
+                "The mold opens",
+                "The hopper dries material",
+                "The robot removes the part"
             ],
-            correct: "Mold alignment and clamp force distribution",
+            correct: "Material is packed into the part to compensate for shrinkage",
             explanation:
-                "Tie bars and platens support mold alignment and distribute clamp load."
+                "Pack and hold pressure helps control shrinkage, sinks, and part weight."
         },
 
         {
-            question: "Which machine type commonly uses servo motors for precise movement?",
+            question: "What does the ejector system do?",
             answers: [
-                "Electric machine",
-                "Hydraulic machine",
-                "Material dryer",
-                "Hot runner controller"
+                "Removes the finished part from the mold",
+                "Controls melt temperature",
+                "Feeds resin to the barrel",
+                "Applies back pressure"
             ],
-            correct: "Electric machine",
+            correct: "Removes the finished part from the mold",
             explanation:
-                "Electric molding machines use servo motors for accurate motion control."
-        },
-
-        {
-            question: "What should a technician do before making machine setting changes?",
-            answers: [
-                "Record the original settings",
-                "Increase all pressures",
-                "Turn off mold protection",
-                "Ignore trend data"
-            ],
-            correct: "Record the original settings",
-            explanation:
-                "Recording original settings allows you to return to the baseline if the change fails."
+                "Ejectors push or assist the molded part out after cooling."
         }
 
     ],
@@ -205,39 +101,26 @@ const quizData = {
             question: "What does melt temperature mainly affect?",
             answers: [
                 "Material viscosity and flow",
-                "Ejector pin length",
-                "Operator schedule",
-                "Mold clamp height only"
+                "Tie bar spacing",
+                "Robot speed",
+                "Operator schedule"
             ],
             correct: "Material viscosity and flow",
             explanation:
-                "Melt temperature controls how easily the plastic flows into the mold."
+                "Melt temperature changes how easily the plastic flows."
         },
 
         {
-            question: "What can happen if melt temperature is too low?",
+            question: "What can low melt temperature cause?",
             answers: [
                 "Short shots and poor flow",
-                "Material degradation only",
-                "Lower injection pressure",
-                "No process change"
+                "Perfect flow every time",
+                "Lower injection pressure demand",
+                "No effect"
             ],
             correct: "Short shots and poor flow",
             explanation:
-                "Cold material is thicker and harder to push through the cavity."
-        },
-
-        {
-            question: "What can happen if melt temperature is too high?",
-            answers: [
-                "Burning or degradation",
-                "Better material strength always",
-                "Less gas formation",
-                "Nozzle freeze-off"
-            ],
-            correct: "Burning or degradation",
-            explanation:
-                "Excess heat can degrade resin and create gas, discoloration, and weak parts."
+                "Cold material is more viscous and harder to fill into the cavity."
         },
 
         {
@@ -246,89 +129,37 @@ const quizData = {
                 "How fast the cavity fills",
                 "How long material dries",
                 "How much water flows through the mold",
-                "How many parts are boxed"
+                "How far the mold opens"
             ],
             correct: "How fast the cavity fills",
             explanation:
-                "Injection speed controls flow front movement during cavity filling."
+                "Injection speed controls the movement of the flow front."
         },
 
         {
-            question: "What defect can injection speed that is too high cause?",
+            question: "What can excessive injection speed cause?",
             answers: [
                 "Burn marks or jetting",
-                "Underdried material",
-                "Low dryer dew point",
-                "Less shear heat"
+                "Better drying",
+                "No shear heat",
+                "Lower gas trapping"
             ],
             correct: "Burn marks or jetting",
             explanation:
-                "Excessive fill speed can trap gas, shear the material, or create jetting."
+                "Fast injection can trap gas, create shear heat, or cause jetting."
         },
 
         {
-            question: "What does injection pressure help overcome?",
+            question: "What does hold pressure do?",
             answers: [
-                "Flow resistance",
-                "Material drying time",
-                "Ejector pin return",
-                "Color selection"
+                "Packs material into the part after filling",
+                "Rotates the screw",
+                "Opens the mold",
+                "Controls dryer airflow"
             ],
-            correct: "Flow resistance",
+            correct: "Packs material into the part after filling",
             explanation:
-                "Injection pressure pushes molten plastic through restrictions in the runner, gate, and cavity."
-        },
-
-        {
-            question: "What can excessive injection pressure cause?",
-            answers: [
-                "Flash and overpacking",
-                "Material drying",
-                "Lower part weight",
-                "Less cavity pressure"
-            ],
-            correct: "Flash and overpacking",
-            explanation:
-                "Too much pressure can overpack the mold and force plastic into parting lines."
-        },
-
-        {
-            question: "What is the purpose of hold pressure?",
-            answers: [
-                "Pack material into the part after filling",
-                "Rotate the screw during recovery",
-                "Open the mold",
-                "Cool the hopper"
-            ],
-            correct: "Pack material into the part after filling",
-            explanation:
-                "Hold pressure compensates for shrinkage after the cavity is filled."
-        },
-
-        {
-            question: "What can low hold pressure cause?",
-            answers: [
-                "Sink marks and voids",
-                "Excessive flash only",
-                "Overpacking",
-                "Nozzle drool only"
-            ],
-            correct: "Sink marks and voids",
-            explanation:
-                "Without enough packing pressure, thick areas can shrink and create sinks or voids."
-        },
-
-        {
-            question: "What does hold time control?",
-            answers: [
-                "How long packing pressure is applied",
-                "How fast the screw rotates",
-                "How long resin sits in the hopper",
-                "How much clamp oil is used"
-            ],
-            correct: "How long packing pressure is applied",
-            explanation:
-                "Hold time controls how long hold pressure remains active after transfer."
+                "Hold pressure compensates for shrinkage after fill."
         },
 
         {
@@ -336,129 +167,38 @@ const quizData = {
             answers: [
                 "The gate freezes",
                 "The hopper empties",
-                "The ejectors move forward",
-                "The operator inspects the part"
+                "The mold opens",
+                "The operator weighs parts"
             ],
             correct: "The gate freezes",
             explanation:
-                "After gate freeze, additional hold time cannot pack more material into the part."
-        },
-
-        {
-            question: "What does cooling time affect the most?",
-            answers: [
-                "Part solidification and cycle time",
-                "Material loading only",
-                "Dryer airflow only",
-                "Colorant ratio only"
-            ],
-            correct: "Part solidification and cycle time",
-            explanation:
-                "Cooling time allows the part to solidify and often makes up most of the total cycle."
-        },
-
-        {
-            question: "What does back pressure improve?",
-            answers: [
-                "Melt mixing and consistency",
-                "Clamp tonnage",
-                "Mold open stroke",
-                "Water fitting size"
-            ],
-            correct: "Melt mixing and consistency",
-            explanation:
-                "Back pressure creates resistance during recovery and improves melt uniformity."
-        },
-
-        {
-            question: "What can back pressure that is too high cause?",
-            answers: [
-                "Excessive shear heat",
-                "Less screw wear",
-                "Lower recovery time every time",
-                "No material degradation"
-            ],
-            correct: "Excessive shear heat",
-            explanation:
-                "Too much back pressure can increase shear heat, recovery time, degradation, and screw wear."
-        },
-
-        {
-            question: "What does screw RPM control?",
-            answers: [
-                "How fast the screw rotates during recovery",
-                "How fast the mold opens only",
-                "How much clamp force is applied",
-                "The gate size"
-            ],
-            correct: "How fast the screw rotates during recovery",
-            explanation:
-                "Screw RPM controls recovery speed and affects shear heat."
+                "After gate freeze, hold pressure can no longer pack material into the cavity."
         },
 
         {
             question: "What is cushion?",
             answers: [
                 "Material left in front of the screw after injection",
-                "A mold safety pad",
-                "A hopper liner",
-                "A dryer filter"
+                "A soft pad behind the mold",
+                "A dryer filter",
+                "A robot safety zone"
             ],
             correct: "Material left in front of the screw after injection",
             explanation:
-                "Cushion is the remaining material that allows pressure transfer without bottoming out the screw."
-        },
-
-        {
-            question: "What can an unstable cushion indicate?",
-            answers: [
-                "Process instability",
-                "Perfect shot consistency",
-                "Correct material drying",
-                "Low mold temperature only"
-            ],
-            correct: "Process instability",
-            explanation:
-                "Large cushion variation can indicate shot inconsistency, check ring issues, or process instability."
+                "Cushion allows pressure transfer and prevents the screw from bottoming out."
         },
 
         {
             question: "What is transfer position?",
             answers: [
                 "The switch point from fill to pack/hold",
-                "The point where the part ejects",
-                "The dryer changeover point",
-                "The mold storage location"
+                "The robot home position",
+                "The dryer setpoint",
+                "The chiller return port"
             ],
             correct: "The switch point from fill to pack/hold",
             explanation:
-                "Transfer position determines where the machine changes from first-stage injection to second-stage hold."
-        },
-
-        {
-            question: "What can transfer that is too late cause?",
-            answers: [
-                "Flash and overpacking",
-                "Short shots only",
-                "Low part weight only",
-                "No pressure rise"
-            ],
-            correct: "Flash and overpacking",
-            explanation:
-                "A late transfer can overfill the cavity before hold pressure begins."
-        },
-
-        {
-            question: "What does mold temperature affect?",
-            answers: [
-                "Cooling rate, surface finish, shrinkage, and warpage",
-                "Only hopper material level",
-                "Only screw diameter",
-                "Only operator login"
-            ],
-            correct: "Cooling rate, surface finish, shrinkage, and warpage",
-            explanation:
-                "Mold temperature strongly affects cooling, dimensions, appearance, and shrinkage."
+                "Transfer separates first-stage fill from second-stage pack/hold."
         }
 
     ],
@@ -479,19 +219,6 @@ const quizData = {
         },
 
         {
-            question: "Which condition can cause a short shot?",
-            answers: [
-                "Low shot size",
-                "Excessive clamp tonnage only",
-                "Too much hold time after gate freeze",
-                "Too much cooling water only"
-            ],
-            correct: "Low shot size",
-            explanation:
-                "If shot size is too low, there may not be enough material to fill and pack the cavity."
-        },
-
-        {
             question: "Thin plastic fins along the parting line are called what?",
             answers: [
                 "Flash",
@@ -501,24 +228,11 @@ const quizData = {
             ],
             correct: "Flash",
             explanation:
-                "Flash is excess material escaping through parting lines, vents, or shutoffs."
+                "Flash is excess plastic escaping through parting lines, vents, or shutoffs."
         },
 
         {
-            question: "What can cause flash?",
-            answers: [
-                "High injection pressure or low clamp force",
-                "Wet material only",
-                "Low cooling time only",
-                "Low screw RPM only"
-            ],
-            correct: "High injection pressure or low clamp force",
-            explanation:
-                "Flash can be caused by excessive cavity pressure, insufficient clamp force, or mold wear."
-        },
-
-        {
-            question: "Surface depressions in thick areas are usually what defect?",
+            question: "Surface depressions in thick areas are usually what?",
             answers: [
                 "Sink marks",
                 "Jetting",
@@ -527,24 +241,11 @@ const quizData = {
             ],
             correct: "Sink marks",
             explanation:
-                "Sink marks are depressions caused by shrinkage, usually in thick sections."
+                "Sink marks are caused by shrinkage, usually in thick sections."
         },
 
         {
-            question: "Which correction commonly helps sink marks?",
-            answers: [
-                "Increase hold pressure or effective hold time",
-                "Reduce all packing",
-                "Lower shot size",
-                "Disable cooling"
-            ],
-            correct: "Increase hold pressure or effective hold time",
-            explanation:
-                "More effective packing can reduce shrinkage in thick areas."
-        },
-
-        {
-            question: "Dark discoloration near the end of fill often points to what defect?",
+            question: "Dark discoloration near the end of fill often points to what?",
             answers: [
                 "Burn marks",
                 "Voids",
@@ -553,33 +254,7 @@ const quizData = {
             ],
             correct: "Burn marks",
             explanation:
-                "Burn marks are often caused by trapped gas, poor venting, or excessive heat."
-        },
-
-        {
-            question: "What mold issue commonly causes burn marks?",
-            answers: [
-                "Poor venting",
-                "Oversized water fittings",
-                "Too much ejector stroke",
-                "Too much dryer airflow"
-            ],
-            correct: "Poor venting",
-            explanation:
-                "Poor venting traps gas and can cause burning when gas is compressed."
-        },
-
-        {
-            question: "A bent or twisted part is usually caused by what defect condition?",
-            answers: [
-                "Warping",
-                "Flash",
-                "Black specks",
-                "Splay"
-            ],
-            correct: "Warping",
-            explanation:
-                "Warping comes from uneven shrinkage, uneven cooling, or internal stress."
+                "Burn marks often come from trapped gas, poor venting, or excessive heat."
         },
 
         {
@@ -592,24 +267,11 @@ const quizData = {
             ],
             correct: "Splay",
             explanation:
-                "Splay appears as silver streaks and is often caused by moisture, gas, or shear."
+                "Splay is often caused by moisture, trapped gas, contamination, or shear."
         },
 
         {
-            question: "What is the first thing to check when seeing splay on hygroscopic material?",
-            answers: [
-                "Drying conditions",
-                "Clamp tonnage only",
-                "Ejector stroke only",
-                "Parting line wear only"
-            ],
-            correct: "Drying conditions",
-            explanation:
-                "Wet hygroscopic material is one of the most common causes of splay."
-        },
-
-        {
-            question: "Snake-like flow marks starting near the gate are usually what?",
+            question: "Snake-like flow marks near the gate are usually what?",
             answers: [
                 "Jetting",
                 "Voids",
@@ -618,33 +280,7 @@ const quizData = {
             ],
             correct: "Jetting",
             explanation:
-                "Jetting happens when material shoots into the cavity before contacting the mold wall."
-        },
-
-        {
-            question: "What adjustment often helps jetting?",
-            answers: [
-                "Reduce initial injection speed",
-                "Increase contamination",
-                "Remove mold protection",
-                "Increase regrind randomly"
-            ],
-            correct: "Reduce initial injection speed",
-            explanation:
-                "Slowing the initial fill can help the melt contact the cavity wall more smoothly."
-        },
-
-        {
-            question: "Internal hollow pockets in thick areas are called what?",
-            answers: [
-                "Voids",
-                "Flash",
-                "Flow lines",
-                "Ejector marks"
-            ],
-            correct: "Voids",
-            explanation:
-                "Voids are internal empty pockets caused by shrinkage, trapped gas, or poor packing."
+                "Jetting occurs when plastic shoots into the cavity before contacting the mold wall."
         },
 
         {
@@ -661,20 +297,7 @@ const quizData = {
         },
 
         {
-            question: "What can help improve weld line strength?",
-            answers: [
-                "Increase melt temperature or improve venting",
-                "Lower material temperature drastically",
-                "Reduce all packing",
-                "Increase contamination"
-            ],
-            correct: "Increase melt temperature or improve venting",
-            explanation:
-                "Hotter flow fronts and better venting can improve bonding where flows meet."
-        },
-
-        {
-            question: "Random dark particles in parts are usually called what?",
+            question: "Random dark particles in molded parts are usually what?",
             answers: [
                 "Black specks",
                 "Jetting",
@@ -683,46 +306,7 @@ const quizData = {
             ],
             correct: "Black specks",
             explanation:
-                "Black specks often come from degraded resin, contamination, or burnt material."
-        },
-
-        {
-            question: "Peeling or layer separation in a molded part is called what?",
-            answers: [
-                "Delamination",
-                "Flash",
-                "Warping",
-                "Cushion loss"
-            ],
-            correct: "Delamination",
-            explanation:
-                "Delamination occurs when layers separate due to contamination, poor bonding, or incompatible materials."
-        },
-
-        {
-            question: "Round marks or stress marks from pins are usually what defect?",
-            answers: [
-                "Ejector marks",
-                "Burn marks",
-                "Flow lines",
-                "Black specks"
-            ],
-            correct: "Ejector marks",
-            explanation:
-                "Ejector marks appear where pins or ejection force affect the part."
-        },
-
-        {
-            question: "Shot-to-shot changes in measurements are called what?",
-            answers: [
-                "Dimensional variation",
-                "Flash only",
-                "Splay only",
-                "Nozzle drool"
-            ],
-            correct: "Dimensional variation",
-            explanation:
-                "Dimensional variation means part measurements are not staying consistent."
+                "Black specks often come from contamination, degraded resin, or burnt material."
         }
 
     ],
@@ -739,33 +323,7 @@ const quizData = {
             ],
             correct: "Melt when heated and solidify when cooled",
             explanation:
-                "Thermoplastics can usually be reheated, melted, shaped, and cooled again."
-        },
-
-        {
-            question: "Which materials are examples of commodity resins?",
-            answers: [
-                "PP, PE, and PS",
-                "Steel and aluminum",
-                "Copper and brass",
-                "Water and oil"
-            ],
-            correct: "PP, PE, and PS",
-            explanation:
-                "Polypropylene, polyethylene, and polystyrene are common commodity resins."
-        },
-
-        {
-            question: "Engineering resins are usually chosen for what?",
-            answers: [
-                "Higher performance requirements",
-                "Only lowest possible cost",
-                "No drying requirements ever",
-                "No temperature sensitivity"
-            ],
-            correct: "Higher performance requirements",
-            explanation:
-                "Engineering resins are used where strength, heat resistance, or dimensional stability matter."
+                "Thermoplastics can usually be melted, shaped, cooled, and reheated."
         },
 
         {
@@ -778,7 +336,7 @@ const quizData = {
             ],
             correct: "The material absorbs moisture from the air",
             explanation:
-                "Hygroscopic materials absorb moisture and often need drying before processing."
+                "Hygroscopic materials absorb moisture and often require drying."
         },
 
         {
@@ -791,59 +349,20 @@ const quizData = {
             ],
             correct: "Splay",
             explanation:
-                "Moisture can turn into steam during molding and cause splay or bubbles."
+                "Moisture can turn to steam during molding and cause splay or bubbles."
         },
 
         {
-            question: "What does material drying depend on?",
+            question: "Which materials usually shrink more?",
             answers: [
-                "Time, temperature, airflow, and dew point",
-                "Clamp tonnage only",
-                "Ejector stroke only",
-                "Operator name only"
-            ],
-            correct: "Time, temperature, airflow, and dew point",
-            explanation:
-                "Effective drying requires proper time, temperature, airflow, and dry air quality."
-        },
-
-        {
-            question: "Which type of material usually shrinks more?",
-            answers: [
-                "Crystalline",
-                "Amorphous",
-                "Metal",
+                "Crystalline materials",
+                "Amorphous materials",
+                "Metals",
                 "Water"
             ],
-            correct: "Crystalline",
+            correct: "Crystalline materials",
             explanation:
-                "Crystalline materials usually shrink more because their molecular structure organizes as they cool."
-        },
-
-        {
-            question: "Which materials are examples of amorphous resins?",
-            answers: [
-                "ABS, PC, Acrylic, and PS",
-                "PP, PE, Nylon, and Acetal only",
-                "Steel and brass",
-                "Oil and water"
-            ],
-            correct: "ABS, PC, Acrylic, and PS",
-            explanation:
-                "ABS, polycarbonate, acrylic, and polystyrene are common amorphous materials."
-        },
-
-        {
-            question: "Which materials are examples of crystalline or semi-crystalline resins?",
-            answers: [
-                "PP, PE, Nylon, PBT, and Acetal",
-                "ABS and PC only",
-                "Acrylic only",
-                "Rubber bands only"
-            ],
-            correct: "PP, PE, Nylon, PBT, and Acetal",
-            explanation:
-                "These materials develop crystalline regions as they cool and often shrink more."
+                "Crystalline materials usually shrink more as molecular structure forms during cooling."
         },
 
         {
@@ -856,20 +375,7 @@ const quizData = {
             ],
             correct: "How easily plastic flows under test conditions",
             explanation:
-                "MFI compares flow behavior under specific lab test conditions."
-        },
-
-        {
-            question: "Higher MFI usually means what?",
-            answers: [
-                "Easier flow",
-                "Harder flow",
-                "More clamp tonnage",
-                "No flow difference"
-            ],
-            correct: "Easier flow",
-            explanation:
-                "A higher melt flow index generally means the material flows more easily."
+                "MFI helps compare flow behavior under specific lab conditions."
         },
 
         {
@@ -878,102 +384,516 @@ const quizData = {
                 "Resistance to flow",
                 "Cooling water pressure",
                 "Clamp speed",
-                "Ejector stroke distance"
+                "Ejector stroke"
             ],
             correct: "Resistance to flow",
             explanation:
-                "Viscosity describes how thick or resistant to flow the material is."
-        },
-
-        {
-            question: "What usually happens to viscosity when melt temperature increases?",
-            answers: [
-                "Viscosity decreases",
-                "Viscosity always increases",
-                "The material becomes impossible to inject",
-                "Clamp force disappears"
-            ],
-            correct: "Viscosity decreases",
-            explanation:
-                "As plastic gets hotter, it usually flows easier and has lower viscosity."
-        },
-
-        {
-            question: "What is shrinkage?",
-            answers: [
-                "Reduction in part size as plastic cools",
-                "Increase in hopper size",
-                "Increase in screw diameter",
-                "Only a color issue"
-            ],
-            correct: "Reduction in part size as plastic cools",
-            explanation:
-                "Plastic shrinks as it cools and solidifies."
+                "Viscosity describes how thick or resistant to flow a material is."
         },
 
         {
             question: "What can excessive or inconsistent regrind cause?",
             answers: [
                 "Brittleness, color variation, and dimensional variation",
-                "Perfect consistency every time",
+                "Perfect consistency",
                 "No contamination risk",
                 "No property change"
             ],
             correct: "Brittleness, color variation, and dimensional variation",
             explanation:
-                "Regrind has heat history and can introduce inconsistency if not controlled."
+                "Regrind has heat history and must be controlled carefully."
+        }
+
+    ],
+
+    moldsetup: [
+
+        {
+            question: "What should be verified first during mold preparation?",
+            answers: [
+                "Correct mold identification",
+                "Operator lunch schedule",
+                "Box label color",
+                "Robot speed only"
+            ],
+            correct: "Correct mold identification",
+            explanation:
+                "The mold number should match the work order before setup begins."
         },
 
         {
-            question: "What issue can glass-filled materials cause over time?",
+            question: "What does machine / mold match verify?",
             answers: [
-                "Screw, barrel, and tooling wear",
-                "No wear at all",
-                "Lower abrasion only",
-                "No processing change"
+                "The mold fits the press and the machine can run the job safely",
+                "The part color is correct",
+                "The operator is trained",
+                "The chiller brand"
             ],
-            correct: "Screw, barrel, and tooling wear",
+            correct: "The mold fits the press and the machine can run the job safely",
             explanation:
-                "Glass-filled materials are abrasive and can wear machine and mold components."
+                "Tie bar spacing, mold height, tonnage, shot size, and ejectors must match."
         },
 
         {
-            question: "What can poor colorant mixing cause?",
+            question: "Why is nozzle alignment important?",
             answers: [
-                "Color streaking",
-                "Better gate freeze",
-                "No surface defects",
-                "Perfect drying"
+                "To prevent leaks, damage, and flow restriction",
+                "To improve box stacking",
+                "To reduce dryer dew point",
+                "To change resin type"
             ],
-            correct: "Color streaking",
+            correct: "To prevent leaks, damage, and flow restriction",
             explanation:
-                "Poor color dispersion can cause streaks and inconsistent appearance."
+                "Poor nozzle seating can cause leakage, sprue issues, or damage."
         },
 
         {
-            question: "What is residence time?",
+            question: "What should be verified after connecting waterlines?",
             answers: [
-                "How long plastic remains heated in the barrel",
-                "How long the operator is on break",
-                "How long water stays in the chiller",
-                "How long the mold sits on a bench"
+                "Water flow and leaks",
+                "Only the color of the hoses",
+                "Operator badge number",
+                "Only the mold name"
             ],
-            correct: "How long plastic remains heated in the barrel",
+            correct: "Water flow and leaks",
             explanation:
-                "Residence time is the time resin spends heated inside the barrel before injection."
+                "Connected hoses do not guarantee flow. Flow and leaks must be checked."
         },
 
         {
-            question: "What can long residence time cause?",
+            question: "Why is dry cycling important?",
             answers: [
-                "Material degradation and black specks",
-                "Perfect material quality",
-                "Lower heat history",
-                "No color change"
+                "It verifies mold, ejector, core, and machine movement before production",
+                "It dries the resin",
+                "It replaces first-piece inspection",
+                "It increases regrind"
             ],
-            correct: "Material degradation and black specks",
+            correct: "It verifies mold, ejector, core, and machine movement before production",
             explanation:
-                "If material sits hot too long, it can degrade, discolor, burn, or create black specks."
+                "Dry cycling helps catch motion and setup issues before plastic is injected."
+        },
+
+        {
+            question: "What is a major risk of poor mold protection setup?",
+            answers: [
+                "Mold damage",
+                "Better cycle time",
+                "Improved drying",
+                "Reduced need for inspection"
+            ],
+            correct: "Mold damage",
+            explanation:
+                "Incorrect mold protection can allow stuck parts or obstructions to damage tooling."
+        }
+
+    ],
+
+    scientific: [
+
+        {
+            question: "What is scientific molding mainly based on?",
+            answers: [
+                "Data and controlled studies",
+                "Guessing",
+                "Changing multiple settings at once",
+                "Only visual inspection"
+            ],
+            correct: "Data and controlled studies",
+            explanation:
+                "Scientific molding uses process data instead of random adjustments."
+        },
+
+        {
+            question: "What does decoupled molding separate?",
+            answers: [
+                "Filling from packing",
+                "Material from color",
+                "Water from oil",
+                "The mold from the machine"
+            ],
+            correct: "Filling from packing",
+            explanation:
+                "Decoupled molding separates first-stage fill from second-stage pack/hold."
+        },
+
+        {
+            question: "What does a fill-only study help identify?",
+            answers: [
+                "Fill pattern, transfer position, and cavity balance",
+                "Only robot speed",
+                "Only dryer temperature",
+                "Only box count"
+            ],
+            correct: "Fill pattern, transfer position, and cavity balance",
+            explanation:
+                "Fill-only studies show how the mold fills without pack/hold influence."
+        },
+
+        {
+            question: "What does a viscosity curve compare?",
+            answers: [
+                "Injection speed, fill time, and pressure response",
+                "Only part color",
+                "Only ejector stroke",
+                "Only cooling water"
+            ],
+            correct: "Injection speed, fill time, and pressure response",
+            explanation:
+                "A viscosity curve helps find a stable fill-speed range."
+        },
+
+        {
+            question: "What does a gate freeze study use heavily?",
+            answers: [
+                "Part weight at different hold times",
+                "Robot home position",
+                "Colorant label",
+                "Conveyor belt speed"
+            ],
+            correct: "Part weight at different hold times",
+            explanation:
+                "Gate freeze is found when part weight stops increasing as hold time increases."
+        },
+
+        {
+            question: "Why is cushion control important?",
+            answers: [
+                "It supports repeatable pressure transfer",
+                "It changes material color",
+                "It cools the mold",
+                "It replaces drying"
+            ],
+            correct: "It supports repeatable pressure transfer",
+            explanation:
+                "Stable cushion helps maintain consistent packing pressure."
+        }
+
+    ],
+
+    quality: [
+
+        {
+            question: "What does first-piece inspection confirm?",
+            answers: [
+                "Parts meet requirements before full production",
+                "The mold can be skipped",
+                "Material no longer matters",
+                "Operators do not need samples"
+            ],
+            correct: "Parts meet requirements before full production",
+            explanation:
+                "First-piece inspection verifies setup and part quality before production release."
+        },
+
+        {
+            question: "Why should parts be checked by cavity on multi-cavity molds?",
+            answers: [
+                "One cavity may have a unique issue",
+                "Cavity tracking is never useful",
+                "All cavities are always identical",
+                "Only the runner matters"
+            ],
+            correct: "One cavity may have a unique issue",
+            explanation:
+                "Cavity-specific tracking helps locate mold or hot runner problems."
+        },
+
+        {
+            question: "What can part weight tracking reveal?",
+            answers: [
+                "Fill, pack, and process stability changes",
+                "Only operator name",
+                "Only box size",
+                "Only chiller brand"
+            ],
+            correct: "Fill, pack, and process stability changes",
+            explanation:
+                "Part weight is a strong indicator of process consistency."
+        },
+
+        {
+            question: "What is containment?",
+            answers: [
+                "Separating suspect or defective parts to protect the customer",
+                "Mixing all parts together",
+                "Skipping inspection",
+                "Changing material without notice"
+            ],
+            correct: "Separating suspect or defective parts to protect the customer",
+            explanation:
+                "Containment prevents suspect parts from reaching the customer or next operation."
+        },
+
+        {
+            question: "What does root cause thinking focus on?",
+            answers: [
+                "Why the defect happened",
+                "Only hiding the defect",
+                "Only increasing pressure",
+                "Ignoring trends"
+            ],
+            correct: "Why the defect happened",
+            explanation:
+                "Root cause thinking identifies the true cause so the issue does not repeat."
+        },
+
+        {
+            question: "Why is shift handoff important?",
+            answers: [
+                "It communicates process changes, quality issues, and open risks",
+                "It replaces all documentation",
+                "It removes the need for quality checks",
+                "It only lists break times"
+            ],
+            correct: "It communicates process changes, quality issues, and open risks",
+            explanation:
+                "Good handoff prevents repeated mistakes and missed quality issues."
+        }
+
+    ],
+
+    hotrunner: [
+
+        {
+            question: "What does a hot runner system do?",
+            answers: [
+                "Keeps plastic molten inside heated channels",
+                "Cools the mold only",
+                "Dries resin",
+                "Applies clamp force"
+            ],
+            correct: "Keeps plastic molten inside heated channels",
+            explanation:
+                "Hot runners use heated manifolds and drops to deliver molten plastic to gates."
+        },
+
+        {
+            question: "What does the manifold do?",
+            answers: [
+                "Distributes molten plastic to hot runner drops",
+                "Ejects parts",
+                "Runs the conveyor",
+                "Stores resin"
+            ],
+            correct: "Distributes molten plastic to hot runner drops",
+            explanation:
+                "The manifold distributes melt from the inlet to each drop."
+        },
+
+        {
+            question: "What can a cold drop cause?",
+            answers: [
+                "Short shot in one cavity",
+                "Better flow always",
+                "No pressure change",
+                "Lower cycle time only"
+            ],
+            correct: "Short shot in one cavity",
+            explanation:
+                "A cold or restricted drop often affects one cavity repeatedly."
+        },
+
+        {
+            question: "What do thermocouples do in a hot runner?",
+            answers: [
+                "Read temperature and provide feedback to the controller",
+                "Open the mold",
+                "Remove parts",
+                "Measure part weight"
+            ],
+            correct: "Read temperature and provide feedback to the controller",
+            explanation:
+                "Thermocouples allow the controller to regulate zone temperature."
+        },
+
+        {
+            question: "What can poor hot runner balance cause?",
+            answers: [
+                "Some cavities flash while others short shot",
+                "Perfect cavity balance",
+                "No dimensional variation",
+                "No need for inspection"
+            ],
+            correct: "Some cavities flash while others short shot",
+            explanation:
+                "Imbalanced filling can create different defects cavity to cavity."
+        },
+
+        {
+            question: "Why are hot runner color changes sometimes difficult?",
+            answers: [
+                "Old color can remain inside flow channels",
+                "Hot runners cannot process color",
+                "Color changes never require purging",
+                "Only cold runners hold old color"
+            ],
+            correct: "Old color can remain inside flow channels",
+            explanation:
+                "Manifolds and drops can trap old color or degraded material."
+        }
+
+    ],
+
+    cooling: [
+
+        {
+            question: "Why is cooling so important in injection molding?",
+            answers: [
+                "It affects cycle time, dimensions, shrinkage, and warpage",
+                "It only changes hopper level",
+                "It replaces packing pressure",
+                "It removes the need for quality"
+            ],
+            correct: "It affects cycle time, dimensions, shrinkage, and warpage",
+            explanation:
+                "Cooling is one of the biggest drivers of cycle time and part stability."
+        },
+
+        {
+            question: "What should be checked before adding more cooling time?",
+            answers: [
+                "Water flow and routing",
+                "Only operator schedule",
+                "Only part color",
+                "Only box count"
+            ],
+            correct: "Water flow and routing",
+            explanation:
+                "Poor water flow should be corrected instead of hidden with extra cooling time."
+        },
+
+        {
+            question: "What can blocked waterlines cause?",
+            answers: [
+                "Hot spots, warpage, sticking, and long cycle times",
+                "Perfect cooling",
+                "Lower mold temperature everywhere",
+                "Better part release every time"
+            ],
+            correct: "Hot spots, warpage, sticking, and long cycle times",
+            explanation:
+                "Restricted circuits reduce heat removal and cause local temperature problems."
+        },
+
+        {
+            question: "What is turbulent flow important for?",
+            answers: [
+                "Better heat transfer",
+                "Color mixing only",
+                "Ejector return only",
+                "Robot grip force"
+            ],
+            correct: "Better heat transfer",
+            explanation:
+                "Turbulent water flow removes heat more effectively than laminar flow."
+        },
+
+        {
+            question: "What can condensation on a mold cause?",
+            answers: [
+                "Water marks, rust, and unsafe conditions",
+                "Improved drying",
+                "Higher clamp force",
+                "Better material viscosity"
+            ],
+            correct: "Water marks, rust, and unsafe conditions",
+            explanation:
+                "Condensation can create defects, rust risk, and safety issues."
+        },
+
+        {
+            question: "Cooling-related warpage is usually caused by what?",
+            answers: [
+                "Uneven cooling and uneven shrinkage",
+                "Perfect mold balance",
+                "Correct water flow everywhere",
+                "Only colorant ratio"
+            ],
+            correct: "Uneven cooling and uneven shrinkage",
+            explanation:
+                "Uneven cooling causes areas of the part to shrink differently."
+        }
+
+    ],
+
+    robotics: [
+
+        {
+            question: "What is the main purpose of automation in injection molding?",
+            answers: [
+                "Remove parts, improve consistency, and reduce manual handling",
+                "Dry resin",
+                "Create clamp force",
+                "Heat the barrel"
+            ],
+            correct: "Remove parts, improve consistency, and reduce manual handling",
+            explanation:
+                "Automation supports part removal, handling, sorting, insert loading, and consistency."
+        },
+
+        {
+            question: "What is EOAT?",
+            answers: [
+                "End-of-arm tooling",
+                "Extra oil and temperature",
+                "Ejector-only automatic timer",
+                "External operator access terminal"
+            ],
+            correct: "End-of-arm tooling",
+            explanation:
+                "EOAT is the tooling mounted to the robot arm to grip, vacuum, or support parts."
+        },
+
+        {
+            question: "What signal tells the machine it is safe to close the mold?",
+            answers: [
+                "Robot clear signal",
+                "Color signal",
+                "Dryer ready signal only",
+                "Part weight signal"
+            ],
+            correct: "Robot clear signal",
+            explanation:
+                "The robot clear signal confirms the robot is out of the mold area."
+        },
+
+        {
+            question: "What can vacuum failure cause?",
+            answers: [
+                "Dropped parts",
+                "Better part pickup",
+                "Lower moisture",
+                "Higher melt temperature"
+            ],
+            correct: "Dropped parts",
+            explanation:
+                "Vacuum loss can cause parts to fall during removal or transfer."
+        },
+
+        {
+            question: "Why is part detection important?",
+            answers: [
+                "It helps prevent stuck parts and mold crashes",
+                "It replaces mold protection",
+                "It controls barrel heat",
+                "It dries material"
+            ],
+            correct: "It helps prevent stuck parts and mold crashes",
+            explanation:
+                "Part detection confirms whether parts were removed properly."
+        },
+
+        {
+            question: "What should be verified before robot pickup?",
+            answers: [
+                "Stable part ejection",
+                "Only box count",
+                "Only regrind amount",
+                "Only chiller brand"
+            ],
+            correct: "Stable part ejection",
+            explanation:
+                "Automation cannot be reliable if parts are not ejected consistently."
         }
 
     ]
@@ -997,10 +917,16 @@ function startQuiz(category) {
             ...quizData.machine,
             ...quizData.processing,
             ...quizData.troubleshooting,
-            ...quizData.materials
+            ...quizData.materials,
+            ...quizData.moldsetup,
+            ...quizData.scientific,
+            ...quizData.quality,
+            ...quizData.hotrunner,
+            ...quizData.cooling,
+            ...quizData.robotics
         ];
 
-        activeQuestions = shuffleQuestions(activeQuestions);
+        activeQuestions = shuffleItems(activeQuestions);
 
         document.getElementById("quizTitle").innerText =
             "Full Mixed Final Exam";
@@ -1009,7 +935,8 @@ function startQuiz(category) {
 
     else {
 
-        activeQuestions = shuffleQuestions(quizData[category]);
+        activeQuestions =
+            shuffleItems(quizData[category]);
 
         document.getElementById("quizTitle").innerText =
             getCategoryTitle(category);
@@ -1037,7 +964,7 @@ function showQuestion() {
         activeQuestions[currentQuestionIndex];
 
     const shuffledAnswers =
-        shuffleQuestions(question.answers);
+        shuffleItems(question.answers);
 
     quizBox.innerHTML = `
 
@@ -1279,6 +1206,30 @@ function getCategoryTitle(category) {
         return "Materials & Resin Science Test";
     }
 
+    else if (category === "moldsetup") {
+        return "Mold Setup & Changeover Test";
+    }
+
+    else if (category === "scientific") {
+        return "Scientific Molding Test";
+    }
+
+    else if (category === "quality") {
+        return "Quality & Inspection Test";
+    }
+
+    else if (category === "hotrunner") {
+        return "Hot Runner Systems Test";
+    }
+
+    else if (category === "cooling") {
+        return "Water & Cooling Systems Test";
+    }
+
+    else if (category === "robotics") {
+        return "Robotics & Automation Test";
+    }
+
     else if (category === "mixed") {
         return "Full Mixed Final Exam";
     }
@@ -1289,7 +1240,7 @@ function getCategoryTitle(category) {
 
 }
 
-function shuffleQuestions(array) {
+function shuffleItems(array) {
 
     const copiedArray =
         [...array];
