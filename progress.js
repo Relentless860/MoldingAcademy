@@ -1,16 +1,16 @@
 const lessons = [
     "machine-basics",
-    "advanced-lessons",
-    "startup-shutdown",
-    "processing-parameters",
-    "troubleshooting",
     "materials",
+    "processing-parameters",
+    "startup-shutdown",
     "mold-setup",
-    "scientific-molding",
-    "quality-inspection",
-    "hot-runners",
     "water-cooling",
+    "quality-inspection",
+    "troubleshooting",
+    "hot-runners",
     "robotics-automation",
+    "scientific-molding",
+    "advanced-lessons",
     "troubleshooting-quiz"
 ];
 

@@ -516,3 +516,18 @@ body:not(:has(header h1:first-child)) main {
     color: #22c55e;
     font-weight: bold;
 }
+.category-card {
+    grid-column: 1 / -1;
+    background-color: #0f172a;
+    border: 2px solid #2563eb;
+}
+
+.category-card h2 {
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 17px;
+    color: #d1d5db;
+}
