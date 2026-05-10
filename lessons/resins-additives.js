@@ -94,7 +94,6 @@ const resinData = {
 
         technicianTips: [
             "Watch shrinkage closely on PE and PP",
-            "Do not underestimate drying or contamination requirements",
             "Check part weight if dimensions drift",
             "Keep colorant mixing consistent",
             "Verify grade because commodity resin families have many variations"
@@ -209,6 +208,19 @@ const resinData = {
         description:
             "Polyethylene is a common commodity resin known for chemical resistance, toughness, flexibility, low moisture absorption, and good impact performance. Major types include LDPE, LLDPE, HDPE, and UHMWPE.",
 
+        tech: {
+            meltRange: "350°F – 550°F",
+            moldRange: "40°F – 120°F",
+            drying: "Usually not required unless material is contaminated or stored poorly.",
+            moistureSensitivity: "Low",
+            shrinkage: "High shrinkage compared with many amorphous plastics.",
+            warnings: [
+                "PE can shrink and warp significantly.",
+                "Poor cooling balance can cause twisting or bowing.",
+                "Easy-flowing grades may flash if clamp force or shutoffs are weak."
+            ]
+        },
+
         mainIdeas: [
             "Good chemical resistance",
             "Low moisture absorption",
@@ -258,6 +270,19 @@ const resinData = {
 
         description:
             "Polypropylene is a lightweight, chemical-resistant commodity resin with good fatigue resistance. It is commonly used for living hinges, caps, containers, automotive parts, and consumer products.",
+
+        tech: {
+            meltRange: "390°F – 550°F",
+            moldRange: "60°F – 160°F",
+            drying: "Usually not required unless material is contaminated or stored poorly.",
+            moistureSensitivity: "Low",
+            shrinkage: "Moderate to high. Semi-crystalline behavior makes cooling important.",
+            warnings: [
+                "PP can warp badly if one side of the mold runs hotter than the other.",
+                "Grade changes can affect shrinkage and dimensions.",
+                "Living hinge parts require the correct grade and flow orientation."
+            ]
+        },
 
         mainIdeas: [
             "Lightweight material",
@@ -309,6 +334,19 @@ const resinData = {
         description:
             "Polystyrene is an amorphous commodity resin known for stiffness, clarity in general-purpose grades, and easy molding. High-impact polystyrene, or HIPS, adds rubber modification for better toughness.",
 
+        tech: {
+            meltRange: "350°F – 500°F",
+            moldRange: "70°F – 140°F",
+            drying: "Usually not required, but drying may help if surface defects appear.",
+            moistureSensitivity: "Low",
+            shrinkage: "Low compared with PE and PP.",
+            warnings: [
+                "General-purpose PS is brittle.",
+                "Overpacking can crack brittle parts.",
+                "Do not confuse GPPS and HIPS because they perform differently."
+            ]
+        },
+
         mainIdeas: [
             "Amorphous material",
             "Good dimensional stability",
@@ -358,6 +396,19 @@ const resinData = {
 
         description:
             "ABS is an engineering/commodity bridge material known for toughness, impact resistance, good appearance, and dimensional stability. It is widely used in housings, covers, automotive trim, and consumer products.",
+
+        tech: {
+            meltRange: "400°F – 520°F",
+            moldRange: "100°F – 180°F",
+            drying: "Recommended. Typical drying is around 175°F – 190°F for 2 – 4 hours depending on grade.",
+            moistureSensitivity: "Moderate",
+            shrinkage: "Low to moderate. Usually more dimensionally stable than PE or PP.",
+            warnings: [
+                "Wet ABS may show splay, silver streaks, or bubbles.",
+                "Too much residence time can cause yellowing or black specks.",
+                "Color matching can be sensitive to melt temperature."
+            ]
+        },
 
         mainIdeas: [
             "Good impact resistance",
@@ -410,6 +461,19 @@ const resinData = {
         description:
             "PVC can be rigid or flexible depending on additives. It has good chemical resistance and flame resistance, but it is heat sensitive and can degrade if overheated.",
 
+        tech: {
+            meltRange: "320°F – 410°F",
+            moldRange: "70°F – 140°F",
+            drying: "Usually not required, but material must be clean and dry.",
+            moistureSensitivity: "Low to moderate depending on compound",
+            shrinkage: "Low to moderate depending on rigid or flexible compound.",
+            warnings: [
+                "Overheating PVC can cause degradation and corrosive fumes.",
+                "Do not leave PVC sitting hot in the barrel for long periods.",
+                "Burning, dark streaks, or strong odor should be handled immediately."
+            ]
+        },
+
         mainIdeas: [
             "Can be rigid or flexible",
             "Good chemical resistance",
@@ -459,6 +523,19 @@ const resinData = {
 
         description:
             "PMMA, commonly called acrylic, is an amorphous material known for excellent clarity, gloss, weather resistance, and stiffness. It is more brittle than PC.",
+
+        tech: {
+            meltRange: "430°F – 520°F",
+            moldRange: "100°F – 180°F",
+            drying: "Required. Typical drying is around 175°F – 200°F for 2 – 4 hours depending on grade.",
+            moistureSensitivity: "Moderate to high",
+            shrinkage: "Low.",
+            warnings: [
+                "Moisture can cause bubbles, splay, or poor clarity.",
+                "Excessive shear can create visual defects.",
+                "Poor handling can scratch finished parts."
+            ]
+        },
 
         mainIdeas: [
             "Excellent optical clarity",
@@ -511,6 +588,19 @@ const resinData = {
         description:
             "Polycarbonate is an amorphous engineering resin known for impact strength, clarity, toughness, and heat resistance. It is moisture sensitive and must be dried correctly.",
 
+        tech: {
+            meltRange: "520°F – 620°F",
+            moldRange: "160°F – 250°F",
+            drying: "Required. Typical drying is around 240°F for 3 – 4 hours depending on grade.",
+            moistureSensitivity: "High",
+            shrinkage: "Low to moderate.",
+            warnings: [
+                "Wet PC can cause splay, bubbles, brittleness, and weak parts.",
+                "Overheating can cause discoloration and degradation.",
+                "High molded-in stress can lead to cracking, especially around chemicals."
+            ]
+        },
+
         mainIdeas: [
             "Very high impact resistance",
             "Can be transparent",
@@ -561,6 +651,19 @@ const resinData = {
 
         description:
             "Nylon is a semi-crystalline engineering resin known for strength, toughness, wear resistance, and chemical resistance. Common types include PA6, PA66, PA12, and glass-filled nylon.",
+
+        tech: {
+            meltRange: "450°F – 570°F",
+            moldRange: "120°F – 220°F",
+            drying: "Required. Typical drying is around 175°F – 200°F for 4 – 8 hours depending on nylon type.",
+            moistureSensitivity: "High",
+            shrinkage: "Moderate to high. Semi-crystalline and moisture-sensitive.",
+            warnings: [
+                "Wet nylon can cause splay, bubbles, weak parts, and brittleness.",
+                "Dimensions may change after molding as nylon absorbs moisture.",
+                "Glass-filled nylon can warp due to fiber orientation."
+            ]
+        },
 
         mainIdeas: [
             "Strong and tough",
@@ -613,6 +716,19 @@ const resinData = {
         description:
             "Acetal, also called POM, is an engineering resin known for stiffness, low friction, wear resistance, and dimensional stability. It is commonly used for gears and precision mechanical parts.",
 
+        tech: {
+            meltRange: "360°F – 430°F",
+            moldRange: "150°F – 220°F",
+            drying: "Usually not required, but material should be clean and dry.",
+            moistureSensitivity: "Low",
+            shrinkage: "Moderate to high.",
+            warnings: [
+                "Do not overheat acetal.",
+                "Degraded acetal can produce strong irritating fumes.",
+                "Avoid long residence time at high temperature."
+            ]
+        },
+
         mainIdeas: [
             "Good wear resistance",
             "Low friction",
@@ -663,6 +779,19 @@ const resinData = {
 
         description:
             "PBT and PET are polyester engineering resins known for strength, chemical resistance, dimensional stability, and electrical properties. They are often used in connectors and automotive parts.",
+
+        tech: {
+            meltRange: "PBT: 430°F – 500°F / PET: 500°F – 560°F",
+            moldRange: "PBT: 120°F – 250°F / PET: 180°F – 300°F",
+            drying: "Required. PBT and PET must be dried properly to prevent degradation.",
+            moistureSensitivity: "High",
+            shrinkage: "Moderate. Filled grades shrink less but may warp from fiber orientation.",
+            warnings: [
+                "Wet polyester can produce brittle, weak parts.",
+                "Dryer problems may not always be obvious visually.",
+                "Do not run if drying history is questionable."
+            ]
+        },
 
         mainIdeas: [
             "Engineering polyester materials",
@@ -715,6 +844,19 @@ const resinData = {
         description:
             "TPE and TPU materials behave like rubber but process like thermoplastics. They are used for flexible grips, seals, soft-touch surfaces, tubing, and overmolded parts.",
 
+        tech: {
+            meltRange: "330°F – 460°F depending on grade",
+            moldRange: "60°F – 140°F",
+            drying: "Depends on grade. TPU usually requires drying. Some TPE grades may not.",
+            moistureSensitivity: "Low to high depending on type",
+            shrinkage: "Varies widely by hardness and compound.",
+            warnings: [
+                "TPU moisture can cause bubbles and splay.",
+                "Soft materials can deform during ejection.",
+                "Excess mold release can affect bonding or appearance."
+            ]
+        },
+
         mainIdeas: [
             "Flexible rubber-like materials",
             "Can be molded with standard thermoplastic equipment",
@@ -765,6 +907,19 @@ const resinData = {
 
         description:
             "PPS is a high-performance resin known for high temperature resistance, chemical resistance, dimensional stability, and flame resistance. It is often glass-filled.",
+
+        tech: {
+            meltRange: "580°F – 650°F",
+            moldRange: "250°F – 320°F",
+            drying: "Often recommended. Follow supplier data sheet.",
+            moistureSensitivity: "Low to moderate depending on grade",
+            shrinkage: "Low to moderate. Filled grades are very dimensionally stable.",
+            warnings: [
+                "High processing temperatures require caution.",
+                "Poor venting can cause burns.",
+                "Filled grades can wear gates, screws, and tooling."
+            ]
+        },
 
         mainIdeas: [
             "High heat resistance",
@@ -817,6 +972,19 @@ const resinData = {
         description:
             "PEEK is a very high-performance resin with excellent heat resistance, chemical resistance, strength, and wear performance. It is expensive and requires high processing temperatures.",
 
+        tech: {
+            meltRange: "680°F – 750°F",
+            moldRange: "300°F – 400°F",
+            drying: "Required. Follow supplier recommendations carefully.",
+            moistureSensitivity: "Moderate",
+            shrinkage: "Moderate. Crystallinity strongly affects dimensions.",
+            warnings: [
+                "High-temperature operation requires correct PPE and machine capability.",
+                "Do not leave PEEK sitting hot longer than necessary.",
+                "Poor mold temperature control can affect crystallinity and performance."
+            ]
+        },
+
         mainIdeas: [
             "Very high heat resistance",
             "Excellent chemical resistance",
@@ -867,6 +1035,19 @@ const resinData = {
 
         description:
             "Liquid Crystal Polymer, or LCP, is a high-performance resin known for excellent flow in thin walls, high heat resistance, dimensional stability, and very low shrinkage in the flow direction.",
+
+        tech: {
+            meltRange: "540°F – 700°F depending on grade",
+            moldRange: "150°F – 250°F",
+            drying: "Usually recommended. Follow supplier data sheet.",
+            moistureSensitivity: "Low to moderate",
+            shrinkage: "Very low in flow direction, but directional shrinkage can cause warpage.",
+            warnings: [
+                "Do not assume low shrinkage means no warpage.",
+                "Directional properties matter.",
+                "Small process changes can affect tiny precision features."
+            ]
+        },
 
         mainIdeas: [
             "Excellent thin-wall flow",
@@ -1263,7 +1444,7 @@ const resinData = {
             "Do not judge impact strength by appearance only",
             "Watch weld line areas",
             "Control regrind",
-            "Avoid over-drying or overheating if not recommended",
+            "Avoid overheating",
             "Report brittle failures immediately"
         ]
     },
@@ -1530,7 +1711,7 @@ const resinData = {
         ],
 
         commonUses: [
-            "Flexible parts need TPE, TPU, PVC, or flexible polyolefins",
+            "Flexible parts may use TPE, TPU, PVC, or flexible polyolefins",
             "Clear impact parts may use PC",
             "Clear rigid parts may use PMMA, PS, or PC",
             "Wear parts may use nylon, acetal, or PEEK",
@@ -1595,6 +1776,60 @@ function showResin(topic) {
         return;
     }
 
+    let technicalInfo = "";
+
+    if (resinTopic.tech) {
+
+        technicalInfo = `
+
+            <div class="polymer-tech-card">
+
+                <h4>Technician Processing Data</h4>
+
+                <div class="polymer-tech-grid">
+
+                    <p>
+                        <strong>Approx. Melt Range:</strong><br>
+                        ${resinTopic.tech.meltRange}
+                    </p>
+
+                    <p>
+                        <strong>Approx. Mold Temp Range:</strong><br>
+                        ${resinTopic.tech.moldRange}
+                    </p>
+
+                    <p>
+                        <strong>Drying Requirement:</strong><br>
+                        ${resinTopic.tech.drying}
+                    </p>
+
+                    <p>
+                        <strong>Moisture Sensitivity:</strong><br>
+                        ${resinTopic.tech.moistureSensitivity}
+                    </p>
+
+                    <p>
+                        <strong>Shrinkage Behavior:</strong><br>
+                        ${resinTopic.tech.shrinkage}
+                    </p>
+
+                </div>
+
+                <h4>Processing Warnings</h4>
+                ${createResinList(resinTopic.tech.warnings)}
+
+                <p class="tech-note">
+                    These are general training ranges. Always follow the
+                    material supplier data sheet, approved process sheet,
+                    and plant procedures for the exact grade being molded.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
     resinBox.innerHTML = `
 
         <h3>${resinTopic.title}</h3>
@@ -1602,6 +1837,8 @@ function showResin(topic) {
         <p>
             ${resinTopic.description}
         </p>
+
+        ${technicalInfo}
 
         <h4>Main Ideas</h4>
         ${createResinList(resinTopic.mainIdeas)}
