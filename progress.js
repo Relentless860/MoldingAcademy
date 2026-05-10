@@ -120,4 +120,215 @@ function resetProgress() {
 
 }
 
+/* LESSON DROPDOWN SYSTEM */
+
+function createLessonDropdowns() {
+
+    const lessonLayout =
+        document.querySelector(".lesson-layout");
+
+    if (!lessonLayout) {
+        return;
+    }
+
+    const currentPage =
+        window.location.pathname;
+
+    if (currentPage.includes("troubleshooting-quiz")) {
+        return;
+    }
+
+    const buttonGroups =
+        document.querySelectorAll(".lesson-layout .button-group");
+
+    buttonGroups.forEach(buttonGroup => {
+
+        if (buttonGroup.closest(".feedback-modal")) {
+            return;
+        }
+
+        const buttons =
+            buttonGroup.querySelectorAll("button");
+
+        if (buttons.length < 3) {
+            return;
+        }
+
+        if (buttonGroup.classList.contains("dropdown-converted")) {
+            return;
+        }
+
+        buttonGroup.classList.add("dropdown-converted");
+
+        const topicOptions =
+            Array.from(buttons).map((button, index) => {
+                return {
+                    index: index,
+                    label: button.innerText.trim(),
+                    button: button
+                };
+            });
+
+        const parentCard =
+            buttonGroup.closest(".card");
+
+        const infoCard =
+            findNextCard(parentCard);
+
+        if (infoCard && !infoCard.defaultInfoHTML) {
+
+            infoCard.defaultInfoHTML =
+                infoCard.innerHTML;
+
+        }
+
+        const topDropdown =
+            buildTopicDropdown(topicOptions, "Select a topic...", function (selectedIndex) {
+
+                if (selectedIndex === null) {
+
+                    resetInformationCard(infoCard);
+
+                    return;
+
+                }
+
+                buttons[selectedIndex].click();
+
+                if (infoCard) {
+
+                    setTimeout(function () {
+
+                        infoCard.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }, 100);
+
+                }
+
+            });
+
+        parentCard.insertBefore(topDropdown, buttonGroup);
+
+    });
+
+}
+
+function buildTopicDropdown(topicOptions, placeholderText, onChangeFunction) {
+
+    const dropdownWrapper =
+        document.createElement("div");
+
+    dropdownWrapper.className =
+        "topic-dropdown-wrapper";
+
+    const label =
+        document.createElement("label");
+
+    label.className =
+        "topic-dropdown-label";
+
+    label.innerText =
+        "Choose Topic";
+
+    const select =
+        document.createElement("select");
+
+    select.className =
+        "topic-dropdown";
+
+    const placeholderOption =
+        document.createElement("option");
+
+    placeholderOption.value =
+        "";
+
+    placeholderOption.innerText =
+        placeholderText;
+
+    select.appendChild(placeholderOption);
+
+    topicOptions.forEach(topic => {
+
+        const option =
+            document.createElement("option");
+
+        option.value =
+            topic.index;
+
+        option.innerText =
+            topic.label;
+
+        select.appendChild(option);
+
+    });
+
+    select.addEventListener("change", function () {
+
+        if (select.value === "") {
+
+            onChangeFunction(null);
+
+            return;
+
+        }
+
+        const selectedIndex =
+            parseInt(select.value);
+
+        onChangeFunction(selectedIndex);
+
+    });
+
+    dropdownWrapper.appendChild(label);
+
+    dropdownWrapper.appendChild(select);
+
+    return dropdownWrapper;
+
+}
+
+function resetInformationCard(infoCard) {
+
+    if (!infoCard) {
+        return;
+    }
+
+    if (infoCard.defaultInfoHTML) {
+
+        infoCard.innerHTML =
+            infoCard.defaultInfoHTML;
+
+    }
+
+}
+
+function findNextCard(currentCard) {
+
+    if (!currentCard) {
+        return null;
+    }
+
+    let nextElement =
+        currentCard.nextElementSibling;
+
+    while (nextElement) {
+
+        if (nextElement.classList.contains("card")) {
+            return nextElement;
+        }
+
+        nextElement =
+            nextElement.nextElementSibling;
+
+    }
+
+    return null;
+
+}
+
 loadProgress();
+
+createLessonDropdowns();
