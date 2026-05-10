@@ -2,8 +2,9 @@ const lessons = [
     "machine-basics",
     "processing-parameters",
     "troubleshooting",
-    "troubleshooting-quiz",
-    "materials"
+    "materials",
+    "advanced-lessons",
+    "troubleshooting-quiz"
 ];
 
 function loadProgress() {
@@ -18,8 +19,11 @@ function loadProgress() {
 
     });
 
-    const progressText = document.getElementById("progressText");
-    const progressFill = document.getElementById("progressFill");
+    const progressText =
+        document.getElementById("progressText");
+
+    const progressFill =
+        document.getElementById("progressFill");
 
     if (progressText && progressFill) {
 
@@ -29,7 +33,8 @@ function loadProgress() {
         const percent =
             (completedCount / lessons.length) * 100;
 
-        progressFill.style.width = percent + "%";
+        progressFill.style.width =
+            percent + "%";
 
     }
 
@@ -41,9 +46,18 @@ function markLessonComplete(lessonName) {
 
     alert("Lesson marked complete!");
 
+    loadProgress();
+
 }
 
 function resetProgress() {
+
+    const confirmReset =
+        confirm("Are you sure you want to reset your progress?");
+
+    if (!confirmReset) {
+        return;
+    }
 
     lessons.forEach(lesson => {
         localStorage.removeItem(lesson);
