@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced Injection Molding</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Advanced Injection Molding</h1>
+
+        <p>
+            Build advanced technician knowledge in scientific molding,
+            mold setup, process control, cooling systems, automation,
+            and production documentation.
+        </p>
+
+    </header>
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="lesson-layout">
+
+        <!-- ADVANCED TOPICS -->
+
+        <section class="card">
+
+            <h2>Advanced Topics</h2>
+
+            <p>
+                Select an advanced topic below to begin training.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showAdvancedTopic('scientific')">
+                    Scientific Molding
+                </button>
+
+                <button onclick="showAdvancedTopic('processwindow')">
+                    Process Window Development
+                </button>
+
+                <button onclick="showAdvancedTopic('moldsetup')">
+                    Mold Setup
+                </button>
+
+                <button onclick="showAdvancedTopic('startup')">
+                    Startup / Shutdown
+                </button>
+
+                <button onclick="showAdvancedTopic('hotrunner')">
+                    Hot Runner Systems
+                </button>
+
+                <button onclick="showAdvancedTopic('cooling')">
+                    Water & Cooling Systems
+                </button>
+
+                <button onclick="showAdvancedTopic('automation')">
+                    Robotics & Automation
+                </button>
+
+                <button onclick="showAdvancedTopic('quality')">
+                    Quality Checks
+                </button>
+
+                <button onclick="showAdvancedTopic('documentation')">
+                    Process Documentation
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ADVANCED INFORMATION -->
+
+        <section class="card">
+
+            <h2>Advanced Lesson Information</h2>
+
+            <div id="advancedBox">
+
+                <p>
+                    Select an advanced topic to begin training.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETE LESSON -->
+
+        <section class="card">
+
+            <button onclick="markLessonComplete('advanced-lessons')">
+
+                Mark Advanced Lessons Complete
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="advanced-lessons.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>
