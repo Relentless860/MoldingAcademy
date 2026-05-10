@@ -31,27 +31,31 @@
 
     <!-- MAIN CONTENT -->
 
-<section class="card progress-card">
-
-    <h2>Your Progress</h2>
-
-    <p id="progressText">
-        Lessons Completed: 0 / 5
-    </p>
-
-    <div class="progress-bar">
-
-        <div id="progressFill"></div>
-
-    </div>
-
-    <button onclick="resetProgress()">
-        Reset Progress
-    </button>
-
-</section>
-
     <main class="home-layout">
+
+        <!-- PROGRESS TRACKING -->
+
+        <section class="card progress-card">
+
+            <h2>Your Progress</h2>
+
+            <p id="progressText">
+                Lessons Completed: 0 / 6
+            </p>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+            <button onclick="resetProgress()">
+
+                Reset Progress
+
+            </button>
+
+        </section>
 
         <!-- MACHINE BASICS -->
 
@@ -60,8 +64,9 @@
             <h2>Machine Basics</h2>
 
             <p>
-                Learn machine components,
-                molding cycles, and machine operation.
+                Learn machine components, molding cycles,
+                clamp systems, ejectors, mold protection,
+                and machine operation.
             </p>
 
             <button onclick="window.location.href='lessons/machine-basics.html'">
@@ -79,8 +84,9 @@
             <h2>Processing Parameters</h2>
 
             <p>
-                Learn how processing settings affect
-                part quality and consistency.
+                Learn how temperatures, pressures, speeds,
+                cushion, transfer, cooling, and recovery settings
+                affect part quality.
             </p>
 
             <button onclick="window.location.href='lessons/processing-parameters.html'">
@@ -98,32 +104,13 @@
             <h2>Troubleshooting Basics</h2>
 
             <p>
-                Learn how to identify and correct
-                injection molding defects.
+                Learn how to identify molding defects,
+                diagnose root causes, and apply corrective actions.
             </p>
 
             <button onclick="window.location.href='lessons/troubleshooting.html'">
 
                 Start Lesson
-
-            </button>
-
-        </section>
-
-        <!-- TROUBLESHOOTING QUIZ -->
-
-        <section class="card">
-
-            <h2>Troubleshooting Challenge</h2>
-
-            <p>
-                Test your troubleshooting skills
-                with interactive defect scenarios.
-            </p>
-
-            <button onclick="window.location.href='lessons/troubleshooting-quiz.html'">
-
-                Start Quiz
 
             </button>
 
@@ -136,8 +123,9 @@
             <h2>Materials & Resin Science</h2>
 
             <p>
-                Learn how plastic materials behave
-                during injection molding.
+                Learn thermoplastics, drying, viscosity,
+                shrinkage, regrind, additives, contamination,
+                and residence time.
             </p>
 
             <button onclick="window.location.href='lessons/materials.html'">
@@ -148,12 +136,53 @@
 
         </section>
 
+        <!-- ADVANCED LESSONS -->
+
+        <section class="card">
+
+            <h2>Advanced Injection Molding</h2>
+
+            <p>
+                Learn scientific molding, process windows,
+                mold setup, startup and shutdown procedures,
+                hot runners, cooling systems, automation,
+                quality checks, and process documentation.
+            </p>
+
+            <button onclick="window.location.href='lessons/advanced-lessons.html'">
+
+                Start Lesson
+
+            </button>
+
+        </section>
+
+        <!-- TRAINING QUIZ -->
+
+        <section class="card">
+
+            <h2>Training Quiz</h2>
+
+            <p>
+                Test your knowledge by category or take a full
+                mixed final exam covering all lessons.
+            </p>
+
+            <button onclick="window.location.href='lessons/troubleshooting-quiz.html'">
+
+                Start Quiz
+
+            </button>
+
+        </section>
+
     </main>
 
-<script src="progress.js"></script>
+    <!-- JAVASCRIPT -->
 
-<script src="progress.js"></script>
-<script src="feedback.js"></script>
+    <script src="progress.js"></script>
+
+    <script src="feedback.js"></script>
 
 </body>
 
