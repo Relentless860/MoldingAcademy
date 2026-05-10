@@ -473,3 +473,46 @@ body:not(:has(header h1:first-child)) main {
     }
 
 }
+
+.lesson-status {
+    display: inline-block;
+    margin: 8px 0 14px 0;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.completed-status {
+    background-color: rgba(34, 197, 94, 0.18);
+    color: #22c55e;
+    border: 1px solid #22c55e;
+}
+
+.not-started-status {
+    background-color: rgba(156, 163, 175, 0.16);
+    color: #d1d5db;
+    border: 1px solid #6b7280;
+}
+
+.score-card {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 15px;
+}
+
+.score-card h3 {
+    margin-top: 0;
+    color: #93c5fd;
+}
+
+.score-card p {
+    margin: 8px 0;
+}
+
+.saved-score-message {
+    color: #22c55e;
+    font-weight: bold;
+}

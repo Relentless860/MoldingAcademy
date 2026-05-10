@@ -901,6 +901,7 @@ const quizData = {
 };
 
 let activeQuestions = [];
+
 let currentQuestionIndex = 0;
 let score = 0;
 let selectedCategory = "";
@@ -944,11 +945,9 @@ function startQuiz(category) {
     }
 
     document.getElementById("resultBox").innerHTML = `
-
         <p>
             Answer each question to complete the test.
         </p>
-
     `;
 
     showQuestion();
@@ -995,6 +994,13 @@ function checkAnswer(selectedAnswer) {
 
     const resultBox =
         document.getElementById("resultBox");
+
+    const answerButtons =
+        document.querySelectorAll("#quizBox button");
+
+    answerButtons.forEach(button => {
+        button.disabled = true;
+    });
 
     if (selectedAnswer === question.correct) {
 
@@ -1082,6 +1088,15 @@ function showFinalScore() {
     const percent =
         Math.round((score / activeQuestions.length) * 100);
 
+    saveQuizScore(
+        selectedCategory,
+        score,
+        activeQuestions.length,
+        percent
+    );
+
+    updateQuizScoreBoard();
+
     quizBox.innerHTML = `
 
         <h3>Test Complete</h3>
@@ -1127,15 +1142,21 @@ function showFinalScore() {
         <h3>Final Score</h3>
 
         <p>
-            Score: <strong>${score} / ${activeQuestions.length}</strong>
+            Score:
+            <strong>${score} / ${activeQuestions.length}</strong>
         </p>
 
         <p>
-            Percentage: <strong>${percent}%</strong>
+            Percentage:
+            <strong>${percent}%</strong>
         </p>
 
         <p>
             ${feedback}
+        </p>
+
+        <p class="saved-score-message">
+            Score saved successfully.
         </p>
 
         <div class="button-group">
@@ -1151,6 +1172,180 @@ function showFinalScore() {
         </div>
 
     `;
+
+}
+
+function saveQuizScore(category, currentScore, totalQuestions, percent) {
+
+    const scoreKey =
+        "quiz-score-" + category;
+
+    const existingScore =
+        JSON.parse(localStorage.getItem(scoreKey)) || {
+            bestPercent: 0,
+            bestScore: 0,
+            bestTotal: totalQuestions,
+            lastPercent: 0,
+            lastScore: 0,
+            lastTotal: totalQuestions,
+            attempts: 0,
+            lastTaken: "Never"
+        };
+
+    existingScore.lastPercent =
+        percent;
+
+    existingScore.lastScore =
+        currentScore;
+
+    existingScore.lastTotal =
+        totalQuestions;
+
+    existingScore.attempts =
+        (existingScore.attempts || 0) + 1;
+
+    if (percent > existingScore.bestPercent) {
+
+        existingScore.bestPercent =
+            percent;
+
+        existingScore.bestScore =
+            currentScore;
+
+        existingScore.bestTotal =
+            totalQuestions;
+
+    }
+
+    existingScore.lastTaken =
+        new Date().toLocaleString();
+
+    localStorage.setItem(scoreKey, JSON.stringify(existingScore));
+
+}
+
+function updateQuizScoreBoard() {
+
+    const scoreHistoryBox =
+        document.getElementById("scoreHistoryBox");
+
+    if (!scoreHistoryBox) {
+        return;
+    }
+
+    const categories = [
+        "machine",
+        "processing",
+        "troubleshooting",
+        "materials",
+        "moldsetup",
+        "scientific",
+        "quality",
+        "hotrunner",
+        "cooling",
+        "robotics",
+        "mixed"
+    ];
+
+    let scoreCards = "";
+
+    categories.forEach(category => {
+
+        const scoreKey =
+            "quiz-score-" + category;
+
+        const savedScore =
+            JSON.parse(localStorage.getItem(scoreKey));
+
+        if (savedScore) {
+
+            scoreCards += `
+
+                <div class="score-card">
+
+                    <h3>${getCategoryTitle(category)}</h3>
+
+                    <p>
+                        Best Score:
+                        <strong>${savedScore.bestPercent}%</strong>
+                        (${savedScore.bestScore} / ${savedScore.bestTotal})
+                    </p>
+
+                    <p>
+                        Last Score:
+                        <strong>${savedScore.lastPercent}%</strong>
+                        (${savedScore.lastScore} / ${savedScore.lastTotal})
+                    </p>
+
+                    <p>
+                        Attempts:
+                        <strong>${savedScore.attempts}</strong>
+                    </p>
+
+                    <p>
+                        Last Taken:
+                        <strong>${savedScore.lastTaken}</strong>
+                    </p>
+
+                </div>
+
+            `;
+
+        }
+
+    });
+
+    if (scoreCards === "") {
+
+        scoreHistoryBox.innerHTML = `
+
+            <p>
+                No quiz scores saved yet. Complete a test to save your first score.
+            </p>
+
+        `;
+
+    }
+
+    else {
+
+        scoreHistoryBox.innerHTML =
+            scoreCards;
+
+    }
+
+}
+
+function resetQuizScores() {
+
+    const confirmReset =
+        confirm("Are you sure you want to reset all saved quiz scores?");
+
+    if (!confirmReset) {
+        return;
+    }
+
+    const categories = [
+        "machine",
+        "processing",
+        "troubleshooting",
+        "materials",
+        "moldsetup",
+        "scientific",
+        "quality",
+        "hotrunner",
+        "cooling",
+        "robotics",
+        "mixed"
+    ];
+
+    categories.forEach(category => {
+
+        localStorage.removeItem("quiz-score-" + category);
+
+    });
+
+    updateQuizScoreBoard();
 
 }
 
@@ -1272,3 +1467,5 @@ function escapeText(text) {
         .replace(/'/g, "\\'");
 
 }
+
+updateQuizScoreBoard();

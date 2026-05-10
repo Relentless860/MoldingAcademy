@@ -1,5 +1,7 @@
 const lessons = [
     "machine-basics",
+    "advanced-lessons",
+    "startup-shutdown",
     "processing-parameters",
     "troubleshooting",
     "materials",
@@ -9,7 +11,6 @@ const lessons = [
     "hot-runners",
     "water-cooling",
     "robotics-automation",
-    "advanced-lessons",
     "troubleshooting-quiz"
 ];
 
@@ -43,6 +44,51 @@ function loadProgress() {
             percent + "%";
 
     }
+
+    updateLessonBadges();
+
+}
+
+function updateLessonBadges() {
+
+    const lessonCards =
+        document.querySelectorAll(".lesson-card");
+
+    lessonCards.forEach(card => {
+
+        const lessonName =
+            card.getAttribute("data-lesson");
+
+        const statusText =
+            card.querySelector(".lesson-status");
+
+        if (!lessonName || !statusText) {
+            return;
+        }
+
+        if (localStorage.getItem(lessonName) === "completed") {
+
+            statusText.innerText =
+                "✅ Completed";
+
+            statusText.classList.add("completed-status");
+
+            statusText.classList.remove("not-started-status");
+
+        }
+
+        else {
+
+            statusText.innerText =
+                "⚪ Not Started";
+
+            statusText.classList.add("not-started-status");
+
+            statusText.classList.remove("completed-status");
+
+        }
+
+    });
 
 }
 
