@@ -1,5 +1,6 @@
 const lessons = [
     "machine-basics",
+    "resins-additives",
     "materials",
     "processing-parameters",
     "startup-shutdown",
