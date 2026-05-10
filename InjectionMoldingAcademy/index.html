@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MoldingAcademy</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>MoldingAcademy</h1>
+
+        <p>
+            Learn Injection Molding from beginner
+            operator to advanced process technician.
+        </p>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+
+<section class="card progress-card">
+
+    <h2>Your Progress</h2>
+
+    <p id="progressText">
+        Lessons Completed: 0 / 5
+    </p>
+
+    <div class="progress-bar">
+
+        <div id="progressFill"></div>
+
+    </div>
+
+    <button onclick="resetProgress()">
+        Reset Progress
+    </button>
+
+</section>
+
+    <main class="home-layout">
+
+        <!-- MACHINE BASICS -->
+
+        <section class="card">
+
+            <h2>Machine Basics</h2>
+
+            <p>
+                Learn machine components,
+                molding cycles, and machine operation.
+            </p>
+
+            <button onclick="window.location.href='lessons/machine-basics.html'">
+
+                Start Lesson
+
+            </button>
+
+        </section>
+
+        <!-- PROCESSING PARAMETERS -->
+
+        <section class="card">
+
+            <h2>Processing Parameters</h2>
+
+            <p>
+                Learn how processing settings affect
+                part quality and consistency.
+            </p>
+
+            <button onclick="window.location.href='lessons/processing-parameters.html'">
+
+                Start Lesson
+
+            </button>
+
+        </section>
+
+        <!-- TROUBLESHOOTING -->
+
+        <section class="card">
+
+            <h2>Troubleshooting Basics</h2>
+
+            <p>
+                Learn how to identify and correct
+                injection molding defects.
+            </p>
+
+            <button onclick="window.location.href='lessons/troubleshooting.html'">
+
+                Start Lesson
+
+            </button>
+
+        </section>
+
+        <!-- TROUBLESHOOTING QUIZ -->
+
+        <section class="card">
+
+            <h2>Troubleshooting Challenge</h2>
+
+            <p>
+                Test your troubleshooting skills
+                with interactive defect scenarios.
+            </p>
+
+            <button onclick="window.location.href='lessons/troubleshooting-quiz.html'">
+
+                Start Quiz
+
+            </button>
+
+        </section>
+
+        <!-- MATERIALS -->
+
+        <section class="card">
+
+            <h2>Materials & Resin Science</h2>
+
+            <p>
+                Learn how plastic materials behave
+                during injection molding.
+            </p>
+
+            <button onclick="window.location.href='lessons/materials.html'">
+
+                Start Lesson
+
+            </button>
+
+        </section>
+
+    </main>
+
+<script src="progress.js"></script>
+
+<script src="progress.js"></script>
+<script src="feedback.js"></script>
+
+</body>
+
+</html>

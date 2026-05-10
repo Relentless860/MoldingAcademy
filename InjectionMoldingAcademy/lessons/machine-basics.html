@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Machine Basics</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Machine Basics</h1>
+
+        <p>
+            Learn the fundamentals of injection molding machines,
+            machine components, molding cycles, and machine systems.
+        </p>
+
+    </header>
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="lesson-layout">
+
+        <!-- MACHINE COMPONENTS -->
+
+        <section class="card">
+
+            <h2>Machine Components</h2>
+
+            <p>
+                Learn the major machine components and their functions.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showComponent('hopper')">
+                    Hopper
+                </button>
+
+                <button onclick="showComponent('barrel')">
+                    Barrel
+                </button>
+
+                <button onclick="showComponent('screw')">
+                    Screw
+                </button>
+
+                <button onclick="showComponent('nozzle')">
+                    Nozzle
+                </button>
+
+                <button onclick="showComponent('clamp')">
+                    Clamp Unit
+                </button>
+
+                <button onclick="showComponent('ejectors')">
+                    Ejector System
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- MACHINE COMPONENT INFO -->
+
+        <section class="card">
+
+            <h2>Component Information</h2>
+
+            <div id="infoBox">
+
+                <p>
+                    Select a machine component to begin learning.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- MOLDING CYCLE -->
+
+        <section class="card">
+
+            <h2>Injection Molding Cycle</h2>
+
+            <p>
+                Learn the stages of the injection molding process.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showCycle('clamping')">
+                    Clamping
+                </button>
+
+                <button onclick="showCycle('injection')">
+                    Injection
+                </button>
+
+                <button onclick="showCycle('packing')">
+                    Pack & Hold
+                </button>
+
+                <button onclick="showCycle('cooling')">
+                    Cooling
+                </button>
+
+                <button onclick="showCycle('ejection')">
+                    Ejection
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- CYCLE INFO -->
+
+        <section class="card">
+
+            <h2>Cycle Information</h2>
+
+            <div id="cycleBox">
+
+                <p>
+                    Select a molding cycle stage to begin learning.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ADVANCED MACHINE SYSTEMS -->
+
+        <section class="card">
+
+            <h2>Advanced Machine Systems</h2>
+
+            <p>
+                Learn how machine systems control motion,
+                pressure, safety, and repeatability.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showSystem('hydraulic')">
+                    Hydraulic System
+                </button>
+
+                <button onclick="showSystem('electric')">
+                    Electric Machines
+                </button>
+
+                <button onclick="showSystem('tiebar')">
+                    Tie Bars & Platens
+                </button>
+
+                <button onclick="showSystem('moldprotection')">
+                    Mold Protection
+                </button>
+
+                <button onclick="showSystem('tonnage')">
+                    Clamp Tonnage
+                </button>
+
+                <button onclick="showSystem('controls')">
+                    Control Panel
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- SYSTEM INFO -->
+
+        <section class="card">
+
+            <h2>System Information</h2>
+
+            <div id="systemBox">
+
+                <p>
+                    Select a machine system to begin learning.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETE LESSON -->
+
+        <section class="card">
+
+            <button onclick="markLessonComplete('machine-basics')">
+
+                Mark Machine Basics Complete
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="machine-basics.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>

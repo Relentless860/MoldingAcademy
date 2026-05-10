@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Materials & Resin Science</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Materials & Resin Science</h1>
+
+        <p>
+            Learn how plastic materials behave during injection molding
+            and how resin properties affect processing, defects, and part quality.
+        </p>
+
+    </header>
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="lesson-layout">
+
+        <!-- MATERIAL TOPICS -->
+
+        <section class="card">
+
+            <h2>Material Topics</h2>
+
+            <p>
+                Select a resin or material science topic below to begin learning.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showMaterial('thermoplastics')">
+                    Thermoplastics
+                </button>
+
+                <button onclick="showMaterial('commodity')">
+                    Commodity Resins
+                </button>
+
+                <button onclick="showMaterial('engineering')">
+                    Engineering Resins
+                </button>
+
+                <button onclick="showMaterial('hygroscopic')">
+                    Hygroscopic Materials
+                </button>
+
+                <button onclick="showMaterial('drying')">
+                    Material Drying
+                </button>
+
+                <button onclick="showMaterial('amorphous-crystalline')">
+                    Amorphous vs Crystalline
+                </button>
+
+                <button onclick="showMaterial('mfi')">
+                    Melt Flow Index
+                </button>
+
+                <button onclick="showMaterial('viscosity')">
+                    Viscosity
+                </button>
+
+                <button onclick="showMaterial('shrinkage')">
+                    Shrinkage
+                </button>
+
+                <button onclick="showMaterial('regrind')">
+                    Regrind
+                </button>
+
+                <button onclick="showMaterial('fillers')">
+                    Fillers & Additives
+                </button>
+
+                <button onclick="showMaterial('colorants')">
+                    Colorants
+                </button>
+
+                <button onclick="showMaterial('contamination')">
+                    Contamination
+                </button>
+
+                <button onclick="showMaterial('residence')">
+                    Residence Time
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- MATERIAL INFORMATION -->
+
+        <section class="card">
+
+            <h2>Material Information</h2>
+
+            <div id="materialBox">
+
+                <p>
+                    Select a material topic to begin training.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETE LESSON -->
+
+        <section class="card">
+
+            <button onclick="markLessonComplete('materials')">
+
+                Mark Materials Complete
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="materials.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>

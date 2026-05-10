@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Processing Parameters</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Processing Parameters</h1>
+
+        <p>
+            Learn how molding parameters affect
+            quality, consistency, and process stability.
+        </p>
+
+    </header>
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="lesson-layout">
+
+        <!-- PARAMETER BUTTONS -->
+
+        <section class="card">
+
+            <h2>Processing Topics</h2>
+
+            <p>
+                Select a parameter below to begin learning.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showParameter('temperature')">
+                    Melt Temperature
+                </button>
+
+                <button onclick="showParameter('speed')">
+                    Injection Speed
+                </button>
+
+                <button onclick="showParameter('pressure')">
+                    Injection Pressure
+                </button>
+
+                <button onclick="showParameter('hold')">
+                    Hold Pressure
+                </button>
+
+                <button onclick="showParameter('holdtime')">
+                    Hold Time
+                </button>
+
+                <button onclick="showParameter('cooling')">
+                    Cooling Time
+                </button>
+
+                <button onclick="showParameter('backpressure')">
+                    Back Pressure
+                </button>
+
+                <button onclick="showParameter('screwrpm')">
+                    Screw RPM
+                </button>
+
+                <button onclick="showParameter('shot-size')">
+                    Shot Size
+                </button>
+
+                <button onclick="showParameter('cushion')">
+                    Cushion
+                </button>
+
+                <button onclick="showParameter('transfer')">
+                    Transfer Position
+                </button>
+
+                <button onclick="showParameter('moldtemp')">
+                    Mold Temperature
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- PARAMETER INFORMATION -->
+
+        <section class="card">
+
+            <h2>Parameter Information</h2>
+
+            <div id="parameterBox">
+
+                <p>
+                    Select a processing parameter to begin training.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETE LESSON -->
+
+        <section class="card">
+
+            <button onclick="markLessonComplete('processing-parameters')">
+
+                Mark Processing Parameters Complete
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="processing-parameters.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>

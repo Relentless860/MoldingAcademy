@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Troubleshooting Basics</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Troubleshooting Basics</h1>
+
+        <p>
+            Learn how to identify molding defects, diagnose root causes,
+            and apply corrective actions like a process technician.
+        </p>
+
+    </header>
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="lesson-layout">
+
+        <!-- DEFECT BUTTONS -->
+
+        <section class="card">
+
+            <h2>Common Injection Molding Defects</h2>
+
+            <p>
+                Select a defect below to learn its appearance, root causes,
+                process indicators, corrections, and prevention methods.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showDefect('shortshot')">
+                    Short Shot
+                </button>
+
+                <button onclick="showDefect('flash')">
+                    Flash
+                </button>
+
+                <button onclick="showDefect('sinkmarks')">
+                    Sink Marks
+                </button>
+
+                <button onclick="showDefect('burnmarks')">
+                    Burn Marks
+                </button>
+
+                <button onclick="showDefect('warping')">
+                    Warping
+                </button>
+
+                <button onclick="showDefect('splay')">
+                    Splay
+                </button>
+
+                <button onclick="showDefect('jetting')">
+                    Jetting
+                </button>
+
+                <button onclick="showDefect('voids')">
+                    Voids
+                </button>
+
+                <button onclick="showDefect('weldlines')">
+                    Weld Lines
+                </button>
+
+                <button onclick="showDefect('flowlines')">
+                    Flow Lines
+                </button>
+
+                <button onclick="showDefect('bubbles')">
+                    Bubbles
+                </button>
+
+                <button onclick="showDefect('blackspecks')">
+                    Black Specks
+                </button>
+
+                <button onclick="showDefect('delamination')">
+                    Delamination
+                </button>
+
+                <button onclick="showDefect('brittleness')">
+                    Brittleness
+                </button>
+
+                <button onclick="showDefect('ejectormarks')">
+                    Ejector Marks
+                </button>
+
+                <button onclick="showDefect('dimensional')">
+                    Dimensional Variation
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- DEFECT INFORMATION -->
+
+        <section class="card">
+
+            <h2>Defect Information</h2>
+
+            <div id="defectBox">
+
+                <p>
+                    Select a defect to begin troubleshooting training.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETE LESSON -->
+
+        <section class="card">
+
+            <button onclick="markLessonComplete('troubleshooting')">
+
+                Mark Troubleshooting Complete
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="troubleshooting.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>
