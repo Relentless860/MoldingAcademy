@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Water & Cooling Systems</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Water & Cooling Systems</h1>
+
+        <p>
+            Learn how mold cooling, water flow, temperature control,
+            and cooling balance affect cycle time, part quality,
+            warpage, shrinkage, and dimensional stability.
+        </p>
+
+    </header>
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="lesson-layout">
+
+        <!-- WATER COOLING TOPICS -->
+
+        <section class="card">
+
+            <h2>Water & Cooling Topics</h2>
+
+            <p>
+                Select a cooling topic below to begin training.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showCooling('overview')">
+                    Cooling System Overview
+                </button>
+
+                <button onclick="showCooling('moldtemp')">
+                    Mold Temperature
+                </button>
+
+                <button onclick="showCooling('routing')">
+                    Waterline Routing
+                </button>
+
+                <button onclick="showCooling('supplyreturn')">
+                    Supply & Return
+                </button>
+
+                <button onclick="showCooling('flowrate')">
+                    Flow Rate
+                </button>
+
+                <button onclick="showCooling('turbulent')">
+                    Turbulent Flow
+                </button>
+
+                <button onclick="showCooling('controllers')">
+                    Temperature Controllers
+                </button>
+
+                <button onclick="showCooling('chillers')">
+                    Chillers
+                </button>
+
+                <button onclick="showCooling('blocked')">
+                    Blocked Waterlines
+                </button>
+
+                <button onclick="showCooling('hotspots')">
+                    Hot Spots
+                </button>
+
+                <button onclick="showCooling('coolingtime')">
+                    Cooling Time
+                </button>
+
+                <button onclick="showCooling('warpage')">
+                    Warpage From Cooling
+                </button>
+
+                <button onclick="showCooling('condensation')">
+                    Condensation
+                </button>
+
+                <button onclick="showCooling('troubleshooting')">
+                    Cooling Troubleshooting
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- WATER COOLING INFORMATION -->
+
+        <section class="card">
+
+            <h2>Cooling Information</h2>
+
+            <div id="coolingBox">
+
+                <p>
+                    Select a water or cooling topic to begin training.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETE LESSON -->
+
+        <section class="card">
+
+            <button onclick="markLessonComplete('water-cooling')">
+
+                Mark Water & Cooling Complete
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="water-cooling.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>

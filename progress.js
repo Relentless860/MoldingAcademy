@@ -6,6 +6,9 @@ const lessons = [
     "mold-setup",
     "scientific-molding",
     "quality-inspection",
+    "hot-runners",
+    "water-cooling",
+    "robotics-automation",
     "advanced-lessons",
     "troubleshooting-quiz"
 ];

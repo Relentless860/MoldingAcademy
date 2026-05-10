@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Robotics & Automation</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Robotics & Automation</h1>
+
+        <p>
+            Learn how robots, conveyors, grippers, sensors,
+            and automation systems interact with injection molding machines.
+        </p>
+
+    </header>
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="lesson-layout">
+
+        <!-- ROBOTICS TOPICS -->
+
+        <section class="card">
+
+            <h2>Robotics & Automation Topics</h2>
+
+            <p>
+                Select an automation topic below to begin training.
+            </p>
+
+            <div class="button-group">
+
+                <button onclick="showAutomation('overview')">
+                    Automation Overview
+                </button>
+
+                <button onclick="showAutomation('robottypes')">
+                    Robot Types
+                </button>
+
+                <button onclick="showAutomation('eoat')">
+                    End-of-Arm Tooling
+                </button>
+
+                <button onclick="showAutomation('sequence')">
+                    Take-Out Sequence
+                </button>
+
+                <button onclick="showAutomation('signals')">
+                    Machine Signals
+                </button>
+
+                <button onclick="showAutomation('vacuum')">
+                    Vacuum Systems
+                </button>
+
+                <button onclick="showAutomation('grippers')">
+                    Grippers
+                </button>
+
+                <button onclick="showAutomation('sensors')">
+                    Part Detection
+                </button>
+
+                <button onclick="showAutomation('ejector-timing')">
+                    Ejector Timing
+                </button>
+
+                <button onclick="showAutomation('conveyors')">
+                    Conveyors
+                </button>
+
+                <button onclick="showAutomation('insert')">
+                    Insert Loading
+                </button>
+
+                <button onclick="showAutomation('degating')">
+                    Degating
+                </button>
+
+                <button onclick="showAutomation('safety')">
+                    Automation Safety
+                </button>
+
+                <button onclick="showAutomation('troubleshooting')">
+                    Automation Troubleshooting
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ROBOTICS INFORMATION -->
+
+        <section class="card">
+
+            <h2>Automation Information</h2>
+
+            <div id="automationBox">
+
+                <p>
+                    Select a robotics or automation topic to begin training.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETE LESSON -->
+
+        <section class="card">
+
+            <button onclick="markLessonComplete('robotics-automation')">
+
+                Mark Robotics & Automation Complete
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="robotics-automation.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>
