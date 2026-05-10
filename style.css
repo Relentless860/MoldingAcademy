@@ -531,3 +531,41 @@ body:not(:has(header h1:first-child)) main {
     font-size: 17px;
     color: #d1d5db;
 }
+
+.polymer-tech-card {
+    background-color: #111827;
+    border: 1px solid #2563eb;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.polymer-tech-card h4 {
+    color: #fbbf24;
+    margin-top: 16px;
+}
+
+.polymer-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.polymer-tech-grid p {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 0;
+}
+
+.tech-note {
+    margin-top: 18px;
+    padding: 14px;
+    background-color: rgba(251, 191, 36, 0.12);
+    border: 1px solid #fbbf24;
+    border-radius: 12px;
+    color: #fde68a;
+    font-weight: bold;
+}
