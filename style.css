@@ -602,3 +602,29 @@ body:not(:has(header h1:first-child)) main {
 .dropdown-converted {
     display: none;
 }
+
+.quiz-mode-box {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.quiz-mode-label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #fbbf24;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.quiz-mode-label input {
+    width: auto;
+    transform: scale(1.2);
+}
+
+.missed-question-card {
+    border-color: #dc2626;
+}

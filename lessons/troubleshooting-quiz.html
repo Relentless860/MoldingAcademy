@@ -16,8 +16,6 @@
 
 <body>
 
-    <!-- HEADER -->
-
     <header>
 
         <h1>Training Quiz</h1>
@@ -27,8 +25,6 @@
         </p>
 
     </header>
-
-    <!-- BACK BUTTON -->
 
     <div class="back-button">
 
@@ -41,11 +37,7 @@
 
     </div>
 
-    <!-- MAIN CONTENT -->
-
     <main class="lesson-layout">
-
-        <!-- CATEGORY SELECTION -->
 
         <section class="card" id="categoryCard">
 
@@ -55,46 +47,70 @@
                 Choose a category below to begin your test.
             </p>
 
+            <div class="quiz-mode-box">
+
+                <label class="quiz-mode-label">
+
+                    <input type="checkbox" id="hardModeToggle">
+
+                    Hard Mode — hide explanations until the end and require 80% to pass
+
+                </label>
+
+            </div>
+
             <div class="button-group">
 
                 <button onclick="startQuiz('machine')">
                     Machine Basics Test
                 </button>
 
-                <button onclick="startQuiz('processing')">
-                    Processing Parameters Test
-                </button>
-
-                <button onclick="startQuiz('troubleshooting')">
-                    Troubleshooting Test
+                <button onclick="startQuiz('resins')">
+                    Resins, Materials & Additives Test
                 </button>
 
                 <button onclick="startQuiz('materials')">
                     Materials & Resin Science Test
                 </button>
 
+                <button onclick="startQuiz('processing')">
+                    Processing Parameters Test
+                </button>
+
+                <button onclick="startQuiz('startup')">
+                    Startup & Shutdown Procedures Test
+                </button>
+
                 <button onclick="startQuiz('moldsetup')">
                     Mold Setup & Changeover Test
-                </button>
-
-                <button onclick="startQuiz('scientific')">
-                    Scientific Molding Test
-                </button>
-
-                <button onclick="startQuiz('quality')">
-                    Quality & Inspection Test
-                </button>
-
-                <button onclick="startQuiz('hotrunner')">
-                    Hot Runner Systems Test
                 </button>
 
                 <button onclick="startQuiz('cooling')">
                     Water & Cooling Systems Test
                 </button>
 
+                <button onclick="startQuiz('quality')">
+                    Quality & Inspection Test
+                </button>
+
+                <button onclick="startQuiz('troubleshooting')">
+                    Troubleshooting Test
+                </button>
+
+                <button onclick="startQuiz('hotrunner')">
+                    Hot Runner Systems Test
+                </button>
+
                 <button onclick="startQuiz('robotics')">
                     Robotics & Automation Test
+                </button>
+
+                <button onclick="startQuiz('scientific')">
+                    Scientific Molding Test
+                </button>
+
+                <button onclick="startQuiz('advanced')">
+                    Advanced Injection Molding Test
                 </button>
 
                 <button onclick="startQuiz('mixed')">
@@ -104,8 +120,6 @@
             </div>
 
         </section>
-
-        <!-- SAVED QUIZ SCORES -->
 
         <section class="card">
 
@@ -127,11 +141,11 @@
 
         </section>
 
-        <!-- QUIZ AREA -->
-
         <section class="card">
 
-            <h2 id="quizTitle">Quiz</h2>
+            <h2 id="quizTitle">
+                Quiz
+            </h2>
 
             <div id="quizBox">
 
@@ -151,8 +165,6 @@
 
         </section>
 
-        <!-- COMPLETE QUIZ -->
-
         <section class="card">
 
             <button onclick="markLessonComplete('troubleshooting-quiz')">
@@ -164,8 +176,6 @@
         </section>
 
     </main>
-
-    <!-- JAVASCRIPT -->
 
     <script src="troubleshooting-quiz.js"></script>
 
