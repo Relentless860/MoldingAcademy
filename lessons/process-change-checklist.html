@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Process Change Checklist</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Process Change Checklist</h1>
+
+        <p>
+            Document processing and scientific molding changes before, during, and after adjustments.
+        </p>
+
+    </header>
+
+    <div class="back-button">
+
+        <button class="home-btn"
+                onclick="location.href='../index.html'">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+    <main class="lesson-layout checklist-page">
+
+        <section class="card checklist-hero">
+
+            <h2>Process Change Documentation</h2>
+
+            <p class="section-intro">
+                Use this checklist any time a process setting is changed. The goal is to protect quality,
+                keep the process repeatable, and make sure every adjustment has a clear reason.
+            </p>
+
+            <div class="tech-note">
+
+                <strong>Best practice:</strong>
+                Change one process variable at a time, document the reason, record actual values,
+                inspect parts, and compare results to the approved baseline.
+
+            </div>
+
+        </section>
+
+        <section class="card checklist-warning">
+
+            <h2>Important Save Warning</h2>
+
+            <p>
+                This checklist saves records to this device and browser only.
+            </p>
+
+            <p>
+                Saved records will still be here if you return to this website using the same computer,
+                same browser, and same website link.
+            </p>
+
+            <p>
+                Records will not automatically transfer to another computer, phone, browser, or user account.
+                Records may also be lost if browser history, cache, or site data is cleared.
+            </p>
+
+            <p>
+                For important production records, use the <strong>Print Current Form</strong> button or
+                <strong>Export Saved Records CSV</strong> button as a backup.
+            </p>
+
+        </section>
+
+        <section class="card checklist-section">
+
+            <h2>Change Information</h2>
+
+            <p class="section-intro">
+                Record the technician, machine, mold, material, and reason for the adjustment.
+            </p>
+
+            <div class="form-grid">
+
+                <div class="form-field">
+
+                    <label for="techName">Technician Name</label>
+
+                    <input type="text"
+                           id="techName"
+                           placeholder="Enter technician name">
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="machineNumber">Machine / Press Number</label>
+
+                    <input type="text"
+                           id="machineNumber"
+                           placeholder="Example: Press 12">
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="moldNumber">Mold / Tool Number</label>
+
+                    <input type="text"
+                           id="moldNumber"
+                           placeholder="Example: Mold 4582">
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="partNumber">Part Number</label>
+
+                    <input type="text"
+                           id="partNumber"
+                           placeholder="Enter part number">
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="materialName">Material / Resin</label>
+
+                    <input type="text"
+                           id="materialName"
+                           placeholder="Example: Nylon 6/6 GF30">
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="changeReason">Reason for Change</label>
+
+                    <select id="changeReason">
+
+                        <option value="">Select reason</option>
+                        <option value="Short shot">Short shot</option>
+                        <option value="Flash">Flash</option>
+                        <option value="Sink / void">Sink / void</option>
+                        <option value="Splay / moisture concern">Splay / moisture concern</option>
+                        <option value="Burn marks">Burn marks</option>
+                        <option value="Warping">Warping</option>
+                        <option value="Dimensional issue">Dimensional issue</option>
+                        <option value="Part sticking">Part sticking</option>
+                        <option value="Cycle improvement">Cycle improvement</option>
+                        <option value="Scientific molding study">Scientific molding study</option>
+                        <option value="Startup adjustment">Startup adjustment</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-field full-width">
+
+                    <label for="reasonNotes">Describe the Issue / Reason</label>
+
+                    <textarea id="reasonNotes"
+                              class="written-answer-input"
+                              placeholder="Explain what was happening before the change. Include defect, cavity, trend, alarm, or quality concern."></textarea>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="card checklist-section">
+
+            <h2>Before Change Checklist</h2>
+
+            <p class="section-intro">
+                Verify the baseline and supporting conditions before changing settings.
+            </p>
+
+            <div class="checklist-grid">
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Verified approved process or setup sheet">
+                    <span>Verified approved process or setup sheet</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Checked actual values, not only setpoints">
+                    <span>Checked actual values, not only setpoints</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Reviewed recent alarms or machine issues">
+                    <span>Reviewed recent alarms or machine issues</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Verified correct material, lot, colorant, and regrind">
+                    <span>Verified correct material, lot, colorant, and regrind</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Checked dryer temperature, time, airflow, and alarms">
+                    <span>Checked dryer temperature, time, airflow, and alarms</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Checked mold temperature and water flow">
+                    <span>Checked mold temperature and water flow</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Checked part quality before adjustment">
+                    <span>Checked part quality before adjustment</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Confirmed suspect parts are contained if needed">
+                    <span>Confirmed suspect parts are contained if needed</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Verified change is allowed or approval was received">
+                    <span>Verified change is allowed or approval was received</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="before-check"
+                           value="Planned to change one variable at a time">
+                    <span>Planned to change one variable at a time</span>
+                </label>
+
+            </div>
+
+        </section>
+
+        <section class="card checklist-section">
+
+            <h2>Process Data Before Change</h2>
+
+            <p class="section-intro">
+                Record the actual values before the change is made.
+            </p>
+
+            <div class="process-data-grid">
+
+                <div class="form-field">
+                    <label for="beforeFillTime">Fill Time</label>
+                    <input type="text" id="beforeFillTime" placeholder="Example: 1.24 sec">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforeCushion">Cushion</label>
+                    <input type="text" id="beforeCushion" placeholder="Example: 0.180 in">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforePeakPressure">Peak Pressure</label>
+                    <input type="text" id="beforePeakPressure" placeholder="Example: 14,500 psi">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforeTransfer">Transfer Position</label>
+                    <input type="text" id="beforeTransfer" placeholder="Example: 0.45 in">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforeHoldPressure">Hold Pressure</label>
+                    <input type="text" id="beforeHoldPressure" placeholder="Example: 8,000 psi">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforeHoldTime">Hold Time</label>
+                    <input type="text" id="beforeHoldTime" placeholder="Example: 4.5 sec">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforeRecovery">Recovery Time</label>
+                    <input type="text" id="beforeRecovery" placeholder="Example: 3.2 sec">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforeCycle">Cycle Time</label>
+                    <input type="text" id="beforeCycle" placeholder="Example: 22.8 sec">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforeMeltTemp">Melt / Barrel Temp</label>
+                    <input type="text" id="beforeMeltTemp" placeholder="Example: 520°F">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforeMoldTemp">Mold Temp</label>
+                    <input type="text" id="beforeMoldTemp" placeholder="Example: 180°F">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforePartWeight">Part Weight</label>
+                    <input type="text" id="beforePartWeight" placeholder="Example: 12.42 g">
+                </div>
+
+                <div class="form-field">
+                    <label for="beforeDimension">Critical Dimension</label>
+                    <input type="text" id="beforeDimension" placeholder="Example: 1.245 in">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="card checklist-section">
+
+            <h2>Change Made</h2>
+
+            <p class="section-intro">
+                Record exactly what was changed and why.
+            </p>
+
+            <div class="form-grid">
+
+                <div class="form-field">
+
+                    <label for="settingChanged">Setting Changed</label>
+
+                    <input type="text"
+                           id="settingChanged"
+                           placeholder="Example: Hold pressure">
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="oldSetting">Old Setting</label>
+
+                    <input type="text"
+                           id="oldSetting"
+                           placeholder="Example: 8,000 psi">
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="newSetting">New Setting</label>
+
+                    <input type="text"
+                           id="newSetting"
+                           placeholder="Example: 8,600 psi">
+
+                </div>
+
+                <div class="form-field full-width">
+
+                    <label for="expectedResult">Expected Result</label>
+
+                    <textarea id="expectedResult"
+                              class="written-answer-input"
+                              placeholder="Explain what you expect this change to improve and why."></textarea>
+
+                </div>
+
+            </div>
+
+            <div class="checklist-grid">
+
+                <label>
+                    <input type="checkbox"
+                           class="change-check"
+                           value="Only one major variable changed">
+                    <span>Only one major variable changed</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="change-check"
+                           value="Change was based on data, not guessing">
+                    <span>Change was based on data, not guessing</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="change-check"
+                           value="Change stayed within allowed process window">
+                    <span>Change stayed within allowed process window</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="change-check"
+                           value="Quality or supervisor approval received if required">
+                    <span>Quality or supervisor approval received if required</span>
+                </label>
+
+            </div>
+
+        </section>
+
+        <section class="card checklist-section">
+
+            <h2>Process Data After Change</h2>
+
+            <p class="section-intro">
+                Record the actual values after the change and compare them to the baseline.
+            </p>
+
+            <div class="process-data-grid">
+
+                <div class="form-field">
+                    <label for="afterFillTime">Fill Time</label>
+                    <input type="text" id="afterFillTime" placeholder="Example: 1.20 sec">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterCushion">Cushion</label>
+                    <input type="text" id="afterCushion" placeholder="Example: 0.190 in">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterPeakPressure">Peak Pressure</label>
+                    <input type="text" id="afterPeakPressure" placeholder="Example: 14,200 psi">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterTransfer">Transfer Position</label>
+                    <input type="text" id="afterTransfer" placeholder="Example: 0.45 in">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterHoldPressure">Hold Pressure</label>
+                    <input type="text" id="afterHoldPressure" placeholder="Example: 8,600 psi">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterHoldTime">Hold Time</label>
+                    <input type="text" id="afterHoldTime" placeholder="Example: 4.5 sec">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterRecovery">Recovery Time</label>
+                    <input type="text" id="afterRecovery" placeholder="Example: 3.3 sec">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterCycle">Cycle Time</label>
+                    <input type="text" id="afterCycle" placeholder="Example: 22.8 sec">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterMeltTemp">Melt / Barrel Temp</label>
+                    <input type="text" id="afterMeltTemp" placeholder="Example: 520°F">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterMoldTemp">Mold Temp</label>
+                    <input type="text" id="afterMoldTemp" placeholder="Example: 180°F">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterPartWeight">Part Weight</label>
+                    <input type="text" id="afterPartWeight" placeholder="Example: 12.55 g">
+                </div>
+
+                <div class="form-field">
+                    <label for="afterDimension">Critical Dimension</label>
+                    <input type="text" id="afterDimension" placeholder="Example: 1.247 in">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="card checklist-section">
+
+            <h2>After Change Verification</h2>
+
+            <p class="section-intro">
+                Confirm the change improved the process and did not create a new problem.
+            </p>
+
+            <div class="checklist-grid">
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Ran enough shots for process to stabilize">
+                    <span>Ran enough shots for process to stabilize</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Compared actual values before and after">
+                    <span>Compared actual values before and after</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Checked part weight">
+                    <span>Checked part weight</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Checked critical dimensions">
+                    <span>Checked critical dimensions</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Checked visual defects">
+                    <span>Checked visual defects</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Checked cavity-to-cavity condition">
+                    <span>Checked cavity-to-cavity condition</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Verified defect improved">
+                    <span>Verified defect improved</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Confirmed no new defect was created">
+                    <span>Confirmed no new defect was created</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Documented change for next shift">
+                    <span>Documented change for next shift</span>
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           class="after-check"
+                           value="Escalated if process cannot make acceptable parts">
+                    <span>Escalated if process cannot make acceptable parts</span>
+                </label>
+
+            </div>
+
+            <div class="form-grid checklist-notes-grid">
+
+                <div class="form-field full-width">
+
+                    <label for="finalNotes">Final Notes / Handoff</label>
+
+                    <textarea id="finalNotes"
+                              class="written-answer-input"
+                              placeholder="Document final result, quality status, open concerns, and anything the next shift needs to know."></textarea>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="card checklist-section checklist-actions">
+
+            <h2>Save Change Record</h2>
+
+            <p class="section-intro">
+                Save the checklist, print the current form, or export saved records as a CSV backup.
+            </p>
+
+            <div class="checklist-action-buttons">
+
+                <button onclick="saveChecklistRecord()">
+                    Save Record
+                </button>
+
+                <button onclick="clearChecklistForm()">
+                    Clear Form
+                </button>
+
+                <button onclick="printChecklistRecord()">
+                    Print Current Form
+                </button>
+
+                <button onclick="exportChecklistCSV()">
+                    Export Saved Records CSV
+                </button>
+
+                <button onclick="deleteAllChecklistRecords()">
+                    Delete Saved Records
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="card checklist-section">
+
+            <h2>Saved Change Records</h2>
+
+            <p class="section-intro">
+                Saved checklist records will appear below.
+            </p>
+
+            <div id="savedChecklistRecords">
+
+                <p>
+                    No saved process change records yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="process-change-checklist.js"></script>
+
+    <script src="../progress.js"></script>
+
+    <script src="../feedback.js"></script>
+
+</body>
+
+</html>

@@ -52,6 +52,30 @@ main {
 }
 
 /* =========================
+   HOMEPAGE DASHBOARD LAYOUT
+========================= */
+
+.home-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    align-items: start;
+}
+
+/* =========================
+   LESSON PAGE LAYOUT
+========================= */
+
+.lesson-layout {
+    display: block !important;
+}
+
+.lesson-layout .card {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* =========================
    CARDS
 ========================= */
 
@@ -62,6 +86,7 @@ main {
     padding: 25px;
     margin-bottom: 25px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+    height: auto;
 }
 
 .card h2 {
@@ -84,6 +109,43 @@ main {
 }
 
 /* =========================
+   CATEGORY CARDS
+========================= */
+
+.category-card {
+    grid-column: 1 / -1;
+    background-color: #0f172a;
+    border: 2px solid #2563eb;
+}
+
+.category-card h2 {
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 17px;
+    color: #d1d5db;
+}
+
+/* =========================
+   HOMEPAGE CHECKLIST CARD
+========================= */
+
+.checklist-home-card {
+    background-color: #0f172a;
+    border: 2px solid #2563eb;
+}
+
+.checklist-home-card h2 {
+    color: #60a5fa;
+}
+
+.checklist-home-card p {
+    color: #d1d5db;
+}
+
+/* =========================
    BUTTONS
 ========================= */
 
@@ -102,6 +164,10 @@ button {
 button:hover {
     background-color: #1d4ed8;
     transform: scale(1.03);
+}
+
+.card button {
+    margin-top: 15px;
 }
 
 /* =========================
@@ -132,8 +198,9 @@ button:hover {
 }
 
 .back-button {
-    padding: 0;
-    margin: 0;
+    max-width: 1100px;
+    margin: 20px auto 0;
+    padding: 0 25px;
 }
 
 /* =========================
@@ -181,6 +248,90 @@ button:hover {
 }
 
 /* =========================
+   QUIZ MODE BOX
+========================= */
+
+.quiz-mode-box {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.quiz-mode-label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #fbbf24;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.quiz-mode-label input {
+    width: auto;
+    transform: scale(1.2);
+}
+
+.quiz-mode-note {
+    color: #d1d5db;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.missed-question-card {
+    border-color: #dc2626;
+}
+
+/* =========================
+   WRITTEN ANSWER MODE
+========================= */
+
+.written-answer-input {
+    width: 100%;
+    min-height: 130px;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.written-answer-input:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+.written-feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.written-feedback-card {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.written-feedback-card h4 {
+    color: #fbbf24;
+    margin-top: 0;
+}
+
+.written-review-card {
+    border-color: #2563eb;
+}
+
+/* =========================
    LISTS
 ========================= */
 
@@ -199,165 +350,6 @@ li {
 
 a {
     text-decoration: none;
-}
-
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 30px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    .button-group {
-        flex-direction: column;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    .home-btn,
-    .back-button button {
-        width: calc(100% - 40px);
-    }
-}
-/* =========================
-   LAYOUT IMPROVEMENTS
-========================= */
-
-/* Make homepage cards lay out like a dashboard */
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 22px;
-    align-items: start;
-}
-
-/* Keep lesson pages readable */
-.card {
-    height: auto;
-}
-
-/* Make buttons align better inside cards */
-.card button {
-    margin-top: 15px;
-}
-
-/* Better spacing for lesson content boxes */
-#infoBox,
-#cycleBox,
-#parameterBox,
-#defectBox,
-#materialBox,
-#quizBox {
-    margin-top: 20px;
-}
-
-/* Keep back button full-width layout from breaking */
-.back-button {
-    max-width: 1100px;
-    margin: 20px auto 0;
-    padding: 0 25px;
-}
-
-/* Make lesson pages stack cleaner */
-body:not(:has(header h1:first-child)) main {
-    display: block;
-}
-
-/* Mobile cleanup */
-@media (max-width: 768px) {
-
-    main {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        margin-bottom: 20px;
-    }
-}
-
-/* =========================
-   HOMEPAGE DASHBOARD LAYOUT
-========================= */
-
-.home-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 22px;
-    align-items: start;
-}
-
-/* =========================
-   LESSON PAGE LAYOUT
-========================= */
-
-.lesson-layout {
-    display: block;
-}
-
-/* =========================
-   LAYOUT CLEANUP
-========================= */
-
-.card {
-    height: auto;
-}
-
-.card button {
-    margin-top: 15px;
-}
-
-#infoBox,
-#cycleBox,
-#parameterBox,
-#defectBox,
-#materialBox,
-#quizBox {
-    margin-top: 20px;
-}
-
-.back-button {
-    max-width: 1100px;
-    margin: 20px auto 0;
-    padding: 0 25px;
-}
-
-/* =========================
-   MOBILE CLEANUP
-========================= */
-
-@media (max-width: 768px) {
-
-    .home-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        margin-bottom: 20px;
-    }
-}
-
-/* FORCE LESSON PAGES TO STACK */
-
-.lesson-layout {
-    display: block !important;
-}
-
-.lesson-layout .card {
-    width: 100%;
-    margin-bottom: 25px;
 }
 
 /* =========================
@@ -462,17 +454,9 @@ body:not(:has(header h1:first-child)) main {
     margin-top: 15px;
 }
 
-/* MOBILE FEEDBACK BUTTON */
-
-@media (max-width: 768px) {
-
-    .feedback-button {
-        right: 15px;
-        bottom: 15px;
-        width: calc(100% - 30px);
-    }
-
-}
+/* =========================
+   LESSON STATUS
+========================= */
 
 .lesson-status {
     display: inline-block;
@@ -495,6 +479,10 @@ body:not(:has(header h1:first-child)) main {
     border: 1px solid #6b7280;
 }
 
+/* =========================
+   SCORE CARDS
+========================= */
+
 .score-card {
     background-color: #111827;
     border: 1px solid #374151;
@@ -516,21 +504,10 @@ body:not(:has(header h1:first-child)) main {
     color: #22c55e;
     font-weight: bold;
 }
-.category-card {
-    grid-column: 1 / -1;
-    background-color: #0f172a;
-    border: 2px solid #2563eb;
-}
 
-.category-card h2 {
-    color: #60a5fa;
-    margin-bottom: 10px;
-}
-
-.category-card p {
-    font-size: 17px;
-    color: #d1d5db;
-}
+/* =========================
+   POLYMER / MATERIAL TECH CARDS
+========================= */
 
 .polymer-tech-card {
     background-color: #111827;
@@ -560,15 +537,24 @@ body:not(:has(header h1:first-child)) main {
     margin: 0;
 }
 
+/* =========================
+   TECH NOTE
+========================= */
+
 .tech-note {
     margin-top: 18px;
-    padding: 14px;
-    background-color: rgba(251, 191, 36, 0.12);
-    border: 1px solid #fbbf24;
-    border-radius: 12px;
-    color: #fde68a;
+    padding: 16px 18px;
+    background-color: rgba(37, 99, 235, 0.10);
+    border: 1px solid #2563eb;
+    border-radius: 14px;
+    color: #dbeafe;
     font-weight: bold;
+    line-height: 1.6;
 }
+
+/* =========================
+   LESSON TOPIC DROPDOWN
+========================= */
 
 .topic-dropdown-wrapper {
     background-color: #111827;
@@ -603,28 +589,296 @@ body:not(:has(header h1:first-child)) main {
     display: none;
 }
 
-.quiz-mode-box {
-    background-color: #111827;
-    border: 1px solid #374151;
-    border-radius: 12px;
-    padding: 15px;
-    margin: 15px 0;
+/* ================================
+   PROCESS CHANGE CHECKLIST PAGE
+================================ */
+
+.checklist-page {
+    max-width: 1180px;
+    margin: 0 auto 60px;
 }
 
-.quiz-mode-label {
+.checklist-hero,
+.checklist-warning,
+.checklist-section {
+    overflow: hidden;
+}
+
+.section-intro {
+    color: #d1d5db;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.checklist-hero .section-intro,
+.checklist-warning p {
+    max-width: 950px;
+}
+
+.checklist-warning {
+    border: 1px solid #2563eb;
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.checklist-warning h2 {
+    color: #93c5fd;
+}
+
+.checklist-warning p {
+    color: #dbeafe;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.form-field {
     display: flex;
-    gap: 10px;
-    align-items: center;
-    color: #fbbf24;
-    font-weight: bold;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label,
+.process-data-grid label {
+    color: #93c5fd;
+    font-weight: 700;
+    font-size: 14px;
     line-height: 1.4;
 }
 
-.quiz-mode-label input {
-    width: auto;
-    transform: scale(1.2);
+.form-field input,
+.form-field select,
+.form-field textarea,
+.process-data-grid input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 15px;
 }
 
-.missed-question-card {
-    border-color: #dc2626;
+.form-field input::placeholder,
+.form-field textarea::placeholder,
+.process-data-grid input::placeholder {
+    color: #9ca3af;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus,
+.process-data-grid input:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.process-data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.process-data-grid > div {
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.checklist-grid label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(15, 23, 42, 0.70);
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+    padding: 14px;
+    color: #e5e7eb;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checklist-grid label span {
+    flex: 1;
+}
+
+.checklist-grid input[type="checkbox"] {
+    width: auto;
+    margin: 3px 0 0;
+    flex-shrink: 0;
+    accent-color: #2563eb;
+}
+
+.checklist-notes-grid {
+    margin-top: 18px;
+}
+
+.checklist-action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.checklist-action-buttons button {
+    width: 100%;
+    margin-top: 0;
+}
+
+.checklist-record-card {
+    border-color: #2563eb;
+}
+
+.checklist-record-card summary {
+    cursor: pointer;
+    color: #93c5fd;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.checklist-detail-box {
+    background-color: #0f172a;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 12px 0;
+}
+
+.checklist-detail-box h4 {
+    color: #93c5fd;
+    margin-bottom: 8px;
+}
+
+.process-data-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+}
+
+.process-data-summary p {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .home-layout,
+    .form-grid,
+    .process-data-grid,
+    .checklist-grid,
+    .checklist-action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .home-btn,
+    .back-button button {
+        width: calc(100% - 40px);
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .feedback-button {
+        right: 15px;
+        bottom: 15px;
+        width: calc(100% - 30px);
+    }
+
+    .checklist-page {
+        max-width: 100%;
+    }
+
+    .tech-note {
+        padding: 14px;
+    }
+
+}
+
+/* =========================
+   PRINT STYLES
+========================= */
+
+@media print {
+
+    .back-button,
+    .button-group,
+    .checklist-action-buttons,
+    .feedback-button,
+    button {
+        display: none !important;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    header,
+    .card,
+    .score-card,
+    .checklist-detail-box {
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid black !important;
+        box-shadow: none !important;
+    }
+
+    .card h2,
+    .card h3,
+    .card h4,
+    .card p,
+    .section-intro,
+    .checklist-warning p,
+    .form-field label,
+    .process-data-grid label {
+        color: black !important;
+    }
+
 }

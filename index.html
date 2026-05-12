@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -14,32 +14,23 @@
 
 </head>
 
-</script>
-
 <body>
-
-    <!-- HEADER -->
 
     <header>
 
         <h1>MoldingAcademy</h1>
 
         <p>
-            Learn Injection Molding from beginner
-            operator to advanced process technician.
+            Injection molding training for process technicians, mold setters, and production-floor troubleshooting.
         </p>
 
     </header>
 
-    <!-- MAIN CONTENT -->
+    <main class="lesson-layout">
 
-    <main class="home-layout">
+        <section class="card">
 
-        <!-- PROGRESS TRACKING -->
-
-        <section class="card progress-card">
-
-            <h2>Your Progress</h2>
+            <h2>Your Training Progress</h2>
 
             <p id="progressText">
                 Lessons Completed: 0 / 14
@@ -47,429 +38,372 @@
 
             <div class="progress-bar">
 
-                <div id="progressFill"></div>
+                <div id="progressFill"
+                     class="progress-fill"></div>
 
             </div>
 
             <button onclick="resetProgress()">
-
                 Reset Progress
-
             </button>
 
         </section>
 
-        <!-- BEGINNER SECTION -->
+        <section class="card category-card checklist-home-card">
+
+            <h2>Process Change Checklist</h2>
+
+            <p>
+                Document processing changes, scientific molding data, before-and-after values,
+                quality checks, and shift handoff notes.
+            </p>
+
+            <p>
+                Use this when a process technician changes a setting and needs to record
+                what changed, why it changed, and whether the change improved the process.
+            </p>
+
+            <button onclick="location.href='lessons/process-change-checklist.html'">
+                Open Process Change Checklist
+            </button>
+
+        </section>
 
         <section class="card category-card">
 
             <h2>Beginner Foundation</h2>
 
             <p>
-                Start here. These lessons teach the basic machine,
-                resin, material, and processing knowledge needed before
-                moving into setup, troubleshooting, and advanced molding.
+                Start here to build the core knowledge needed to understand injection molding machines,
+                materials, and basic processing.
             </p>
 
         </section>
 
-        <!-- MACHINE BASICS -->
+        <section class="card lesson-card"
+                 data-lesson="machine-basics">
 
-        <section class="card lesson-card" data-lesson="machine-basics">
+            <h2>Machine Basics</h2>
 
-            <h2>1. Machine Basics</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn machine components, molding cycles,
-                clamp systems, ejectors, mold protection,
-                and machine operation.
+                Learn the main parts of an injection molding machine including the hopper,
+                barrel, screw, clamp, mold, and ejector system.
             </p>
 
-            <button onclick="window.location.href='lessons/machine-basics.html'">
-
+            <button onclick="location.href='lessons/machine-basics.html'">
                 Start Lesson
-
             </button>
 
         </section>
 
-        <!-- RESINS ADDITIVES -->
+        <section class="card lesson-card"
+                 data-lesson="resins-additives">
 
-        <section class="card lesson-card" data-lesson="resins-additives">
+            <h2>Resins, Materials & Additives</h2>
 
-            <h2>2. Resins, Materials & Additives</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn common resin families, engineering plastics,
-                high-performance materials, fillers, glass fiber,
-                colorants, flame retardants, stabilizers,
-                impact modifiers, lubricants, and regrind.
+                Learn common resin families, additives, fillers, colorants, regrind,
+                and how material selection affects processing.
             </p>
 
-            <button onclick="window.location.href='lessons/resins-additives.html'">
-
+            <button onclick="location.href='lessons/resins-additives.html'">
                 Start Lesson
-
             </button>
 
         </section>
 
-        <!-- MATERIALS -->
+        <section class="card lesson-card"
+                 data-lesson="materials">
 
-        <section class="card lesson-card" data-lesson="materials">
+            <h2>Materials & Resin Science</h2>
 
-            <h2>3. Materials & Resin Science</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn thermoplastics, drying, viscosity,
-                shrinkage, regrind, additives, contamination,
-                and residence time.
+                Understand moisture, drying, amorphous vs semi-crystalline materials,
+                viscosity, shrinkage, and material behavior.
             </p>
 
-            <button onclick="window.location.href='lessons/materials.html'">
-
+            <button onclick="location.href='lessons/materials.html'">
                 Start Lesson
-
             </button>
 
         </section>
 
-        <!-- PROCESSING PARAMETERS -->
+        <section class="card lesson-card"
+                 data-lesson="processing-parameters">
 
-        <section class="card lesson-card" data-lesson="processing-parameters">
+            <h2>Processing Parameters</h2>
 
-            <h2>4. Processing Parameters</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn how temperatures, pressures, speeds,
-                cushion, transfer, cooling, and recovery settings
-                affect part quality.
+                Learn the major process settings including injection speed, hold pressure,
+                hold time, transfer position, cushion, back pressure, and cooling time.
             </p>
 
-            <button onclick="window.location.href='lessons/processing-parameters.html'">
-
+            <button onclick="location.href='lessons/processing-parameters.html'">
                 Start Lesson
-
             </button>
 
         </section>
-
-        <!-- CORE FLOOR SKILLS SECTION -->
 
         <section class="card category-card">
 
             <h2>Core Production Floor Skills</h2>
 
             <p>
-                These lessons teach the practical skills needed to safely
-                start jobs, set molds, verify cooling, inspect parts,
-                and maintain stable production.
+                Build the hands-on skills used during startup, shutdown, mold changeovers,
+                cooling checks, and part inspection.
             </p>
 
         </section>
 
-        <!-- STARTUP SHUTDOWN -->
+        <section class="card lesson-card"
+                 data-lesson="startup-shutdown">
 
-        <section class="card lesson-card" data-lesson="startup-shutdown">
+            <h2>Startup & Shutdown Procedures</h2>
 
-            <h2>5. Startup & Shutdown Procedures</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn safe startup checks, material verification,
-                dryer checks, barrel heat soak, mold temperature setup,
-                first shots, normal shutdown, purge-out,
-                emergency shutdown, and shift handoff.
+                Learn safe startup and shutdown routines, material verification,
+                purging, heat soak, first shots, and shift handoff.
             </p>
 
-            <button onclick="window.location.href='lessons/startup-shutdown.html'">
-
+            <button onclick="location.href='lessons/startup-shutdown.html'">
                 Start Lesson
-
             </button>
 
         </section>
 
-        <!-- MOLD SETUP -->
+        <section class="card lesson-card"
+                 data-lesson="mold-setup">
 
-        <section class="card lesson-card" data-lesson="mold-setup">
+            <h2>Mold Setup & Changeover</h2>
 
-            <h2>6. Mold Setup & Changeover</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn mold preparation, machine matching,
-                mold hanging, clamp setup, nozzle alignment,
-                waterlines, ejectors, core pulls, mold protection,
-                dry cycling, and first shots.
+                Learn mold identification, machine match, nozzle alignment, waterlines,
+                ejectors, core pulls, dry cycling, and mold protection.
             </p>
 
-            <button onclick="window.location.href='lessons/mold-setup.html'">
-
+            <button onclick="location.href='lessons/mold-setup.html'">
                 Start Lesson
-
             </button>
 
         </section>
 
-        <!-- WATER COOLING -->
+        <section class="card lesson-card"
+                 data-lesson="water-cooling">
 
-        <section class="card lesson-card" data-lesson="water-cooling">
+            <h2>Water & Cooling Systems</h2>
 
-            <h2>7. Water & Cooling Systems</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn mold temperature, waterline routing,
-                supply and return flow, flow rate, turbulent flow,
-                chillers, hot spots, blocked circuits,
-                cooling time, condensation, and warpage.
+                Learn how cooling affects cycle time, shrinkage, warpage, sticking,
+                dimensions, and process stability.
             </p>
 
-            <button onclick="window.location.href='lessons/water-cooling.html'">
-
+            <button onclick="location.href='lessons/water-cooling.html'">
                 Start Lesson
-
             </button>
 
         </section>
 
-        <!-- QUALITY INSPECTION -->
+        <section class="card lesson-card"
+                 data-lesson="quality-inspection">
 
-        <section class="card lesson-card" data-lesson="quality-inspection">
+            <h2>Quality & Inspection</h2>
 
-            <h2>8. Quality & Inspection</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn first-piece inspection, visual inspection,
-                dimensional checks, gauges, part weight tracking,
-                approved samples, containment, and root cause thinking.
+                Learn first-piece inspection, visual defects, dimensional checks,
+                cavity tracking, containment, and quality documentation.
             </p>
 
-            <button onclick="window.location.href='lessons/quality-inspection.html'">
-
+            <button onclick="location.href='lessons/quality-inspection.html'">
                 Start Lesson
-
             </button>
 
         </section>
-
-        <!-- TROUBLESHOOTING SECTION -->
 
         <section class="card category-card">
 
             <h2>Troubleshooting & Process Control</h2>
 
             <p>
-                These lessons build technician-level thinking:
-                identifying defects, connecting symptoms to root causes,
-                and controlling the process using data.
+                Learn how to diagnose defects, use actual process data, and control
+                common production-floor problems.
             </p>
 
         </section>
 
-        <!-- TROUBLESHOOTING -->
+        <section class="card lesson-card"
+                 data-lesson="troubleshooting">
 
-        <section class="card lesson-card" data-lesson="troubleshooting">
+            <h2>Troubleshooting Basics</h2>
 
-            <h2>9. Troubleshooting Basics</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn how to identify molding defects,
-                diagnose root causes, and apply corrective actions.
+                Learn how to troubleshoot short shots, flash, splay, burn marks,
+                sink, weld lines, warpage, sticking, and process instability.
             </p>
 
-            <button onclick="window.location.href='lessons/troubleshooting.html'">
-
+            <button onclick="location.href='lessons/troubleshooting.html'">
                 Start Lesson
-
             </button>
 
         </section>
 
-        <!-- HOT RUNNERS -->
+        <section class="card lesson-card"
+                 data-lesson="hot-runners">
 
-        <section class="card lesson-card" data-lesson="hot-runners">
+            <h2>Hot Runner Systems</h2>
 
-            <h2>10. Hot Runner Systems</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn hot runner manifolds, drops, heaters,
-                thermocouples, controllers, valve gates,
-                cold drops, balance, purging, and hot runner defects.
+                Learn hot runner manifolds, drops, tips, thermocouples, heaters,
+                valve gates, balance issues, and troubleshooting.
             </p>
 
-            <button onclick="window.location.href='lessons/hot-runners.html'">
-
+            <button onclick="location.href='lessons/hot-runners.html'">
                 Start Lesson
-
             </button>
 
         </section>
 
-        <!-- ROBOTICS AUTOMATION -->
+        <section class="card lesson-card"
+                 data-lesson="robotics-automation">
 
-        <section class="card lesson-card" data-lesson="robotics-automation">
+            <h2>Robotics & Automation</h2>
 
-            <h2>11. Robotics & Automation</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn robot types, end-of-arm tooling,
-                take-out sequences, machine signals, vacuum systems,
-                grippers, sensors, conveyors, insert loading,
-                degating, and automation safety.
+                Learn robot safety, EOAT, part removal, vacuum checks, part detection,
+                clear signals, reject handling, and automation troubleshooting.
             </p>
 
-            <button onclick="window.location.href='lessons/robotics-automation.html'">
-
+            <button onclick="location.href='lessons/robotics-automation.html'">
                 Start Lesson
-
             </button>
 
         </section>
-
-        <!-- ADVANCED SECTION -->
 
         <section class="card category-card">
 
             <h2>Advanced Technician Skills</h2>
 
             <p>
-                These lessons are for higher-level process control,
-                scientific molding, advanced decision making,
-                and preparing for process technician responsibilities.
+                Learn data-driven molding, scientific studies, process windows,
+                documentation, and advanced troubleshooting logic.
             </p>
 
         </section>
 
-        <!-- SCIENTIFIC MOLDING -->
+        <section class="card lesson-card"
+                 data-lesson="scientific-molding">
 
-        <section class="card lesson-card" data-lesson="scientific-molding">
+            <h2>Scientific Molding</h2>
 
-            <h2>12. Scientific Molding</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn fill-only studies, viscosity curves,
-                pressure loss studies, cavity balance,
-                gate freeze, cushion control, part weight studies,
-                and process windows.
+                Learn decoupled molding, fill-only studies, viscosity curves,
+                gate freeze studies, process windows, and data-based decisions.
             </p>
 
-            <button onclick="window.location.href='lessons/scientific-molding.html'">
-
+            <button onclick="location.href='lessons/scientific-molding.html'">
                 Start Lesson
-
             </button>
 
         </section>
 
-        <!-- ADVANCED LESSONS -->
+        <section class="card lesson-card"
+                 data-lesson="advanced-lessons">
 
-        <section class="card lesson-card" data-lesson="advanced-lessons">
+            <h2>Advanced Injection Molding</h2>
 
-            <h2>13. Advanced Injection Molding</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Learn process control, startup and shutdown procedures,
-                automation, quality checks, and process documentation.
+                Learn advanced process control, troubleshooting strategy,
+                shift handoff, process documentation, and technician decision-making.
             </p>
 
-            <button onclick="window.location.href='lessons/advanced-lessons.html'">
-
+            <button onclick="location.href='lessons/advanced-lessons.html'">
                 Start Lesson
-
             </button>
 
         </section>
-
-        <!-- FINAL TEST SECTION -->
 
         <section class="card category-card">
 
             <h2>Final Knowledge Check</h2>
 
             <p>
-                After completing the lessons, use the quiz to test each
-                category or take the full mixed final exam.
+                Test your understanding with category quizzes, hard mode, and written answer mode.
             </p>
 
         </section>
 
-        <!-- TRAINING QUIZ -->
+        <section class="card lesson-card"
+                 data-lesson="troubleshooting-quiz">
 
-        <section class="card lesson-card" data-lesson="troubleshooting-quiz">
+            <h2>Training Quiz</h2>
 
-            <h2>14. Training Quiz</h2>
-
-            <p class="lesson-status">
+            <span class="lesson-status">
                 ⚪ Not Started
-            </p>
+            </span>
 
             <p>
-                Test your knowledge by category or take a full
-                mixed final exam covering all lessons.
+                Take quizzes by category, use Hard Mode, or try written answer mode
+                for more realistic technician-style troubleshooting practice.
             </p>
 
-            <button onclick="window.location.href='lessons/troubleshooting-quiz.html'">
-
+            <button onclick="location.href='lessons/troubleshooting-quiz.html'">
                 Start Quiz
-
             </button>
 
         </section>
 
     </main>
-
-    <!-- JAVASCRIPT -->
 
     <script src="progress.js"></script>
 
