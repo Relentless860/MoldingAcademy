@@ -882,3 +882,242 @@ a {
     }
 
 }
+
+/* =========================================================
+   MOBILE FIX — PROCESS CHANGE CHECKLIST
+   Paste this at the VERY BOTTOM of style.css
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    header {
+        padding: 28px 16px;
+    }
+
+    header h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    header p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    main,
+    .lesson-layout,
+    .checklist-page {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        margin: 0;
+    }
+
+    .card,
+    .checklist-section,
+    .checklist-hero,
+    .checklist-warning {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 14px;
+    }
+
+    .card h2,
+    .checklist-section h2 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .section-intro,
+    .card p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Fix all checklist form layouts on mobile */
+
+    .form-grid,
+    .process-data-grid,
+    .checklist-grid,
+    .checklist-action-buttons {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        width: 100%;
+    }
+
+    .form-field,
+    .process-data-grid > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+
+    .form-field label,
+    .process-data-grid label,
+    .checklist-section label {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.4;
+        color: #93c5fd;
+        font-weight: 700;
+        margin: 0 0 6px 0;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea,
+    .process-data-grid input,
+    .checklist-section input[type="text"],
+    .checklist-section select,
+    .checklist-section textarea {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 13px 14px;
+        border-radius: 12px;
+        border: 1px solid #374151;
+        background-color: #0f172a;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1.4;
+        box-sizing: border-box;
+        margin: 0 0 12px 0;
+    }
+
+    .form-field textarea,
+    .written-answer-input,
+    .checklist-section textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    .full-width {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    /* Fix checkboxes so each item becomes its own clean card */
+
+    .checklist-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .checklist-grid label {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        width: 100%;
+        padding: 14px;
+        background-color: #111827;
+        border: 1px solid #374151;
+        border-radius: 12px;
+        color: #e5e7eb;
+        font-size: 16px;
+        line-height: 1.45;
+        margin: 0;
+    }
+
+    .checklist-grid label span {
+        display: block;
+        flex: 1;
+    }
+
+    .checklist-grid input[type="checkbox"],
+    .checklist-section input[type="checkbox"] {
+        width: 22px !important;
+        height: 22px !important;
+        min-width: 22px !important;
+        margin: 1px 0 0 0 !important;
+        flex-shrink: 0;
+        accent-color: #2563eb;
+    }
+
+    /* Fix save / export / delete buttons */
+
+    .checklist-action-buttons {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .checklist-action-buttons button,
+    .checklist-section button,
+    button {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 16px;
+        font-size: 16px;
+        border-radius: 12px;
+        margin-top: 0;
+        transform: none;
+    }
+
+    button:hover {
+        transform: none;
+    }
+
+    /* Fix back button */
+
+    .back-button {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 14px;
+        margin: 14px 0 0;
+    }
+
+    .home-btn,
+    .back-button button {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Stop feedback button from covering form fields on mobile */
+
+    .feedback-button {
+        position: static !important;
+        width: calc(100% - 28px) !important;
+        margin: 20px 14px !important;
+        display: block;
+        border-radius: 12px;
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+
+    /* Saved record cards */
+
+    .score-card,
+    .checklist-record-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .process-data-summary {
+        grid-template-columns: 1fr !important;
+    }
+
+}
