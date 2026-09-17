@@ -2,6 +2,8 @@ const defectData = {
 
     shortshot: {
         title: "Short Shot",
+        image: "../images/defects/short-shot.png",
+        imageAlt: "Injection-molded part with an incomplete fill, illustrating a short shot.",
 
         description:
             "A short shot occurs when the mold cavity does not completely fill with plastic.",
@@ -65,6 +67,8 @@ const defectData = {
 
     flash: {
         title: "Flash",
+        image: "../images/defects/flash.png",
+        imageAlt: "Injection-molded part with thin excess plastic along its edge, illustrating flash.",
 
         description:
             "Flash is excess plastic that escapes between mold parting surfaces, vents, shutoffs, or ejector areas.",
@@ -127,6 +131,8 @@ const defectData = {
 
     sinkmarks: {
         title: "Sink Marks",
+        image: "../images/defects/sink-marks.jpg",
+        imageAlt: "Injection-molded part with a visible surface depression, illustrating a sink mark.",
 
         description:
             "Sink marks are surface depressions caused by material shrinkage during cooling.",
@@ -189,6 +195,8 @@ const defectData = {
 
     burnmarks: {
         title: "Burn Marks",
+        image: "../images/defects/burn-marks.png",
+        imageAlt: "Injection-molded part with dark discoloration, illustrating burn marks.",
 
         description:
             "Burn marks are dark discolorations caused by trapped gas, excessive heat, or material degradation.",
@@ -252,6 +260,8 @@ const defectData = {
 
     warping: {
         title: "Warping",
+        image: "../images/defects/warpage.png",
+        imageAlt: "Injection-molded part distorted out of shape, illustrating warpage.",
 
         description:
             "Warping occurs when uneven shrinkage or internal stress causes the part to bend or twist.",
@@ -315,6 +325,8 @@ const defectData = {
 
     splay: {
         title: "Splay",
+        image: "../images/defects/splay.png",
+        imageAlt: "Injection-molded part with silver streaking, illustrating splay.",
 
         description:
             "Splay appears as silver streaks caused by moisture, gas, contamination, or excessive shear in the melt.",
@@ -377,6 +389,8 @@ const defectData = {
 
     jetting: {
         title: "Jetting",
+        image: "../images/defects/jetting.png",
+        imageAlt: "Injection-molded part with a wavy jetting pattern near the gate area.",
 
         description:
             "Jetting occurs when molten plastic shoots into the cavity without properly contacting the mold wall.",
@@ -435,6 +449,8 @@ const defectData = {
 
     voids: {
         title: "Voids",
+        image: "../images/defects/voids.png",
+        imageAlt: "Injection-molded part showing a bubble-like void defect.",
 
         description:
             "Voids are internal pockets caused by shrinkage, trapped gas, or insufficient packing.",
@@ -496,6 +512,8 @@ const defectData = {
 
     weldlines: {
         title: "Weld Lines",
+        image: "../images/defects/weld-lines.svg",
+        imageAlt: "Diagram of two plastic flow fronts meeting to form a weld line.",
 
         description:
             "Weld lines form where two flow fronts meet and do not fully bond together.",
@@ -616,6 +634,8 @@ const defectData = {
 
     bubbles: {
         title: "Bubbles",
+        image: "../images/defects/voids.png",
+        imageAlt: "Injection-molded part showing bubble defects.",
 
         description:
             "Bubbles are gas or moisture pockets visible inside or on the surface of the molded part.",
@@ -1008,9 +1028,26 @@ function showDefect(defectKey) {
         return;
     }
 
+    const defectVisual = defect.image
+        ? `
+            <figure class="defect-visual">
+                <img class="defect-image"
+                     src="${defect.image}"
+                     alt="${defect.imageAlt || `Reference example of ${defect.title}`}"
+                     loading="lazy"
+                     decoding="async">
+                <figcaption>
+                    Reference visual — see Image Credits below.
+                </figcaption>
+            </figure>
+        `
+        : "";
+
     defectBox.innerHTML = `
 
         <h3>${defect.title}</h3>
+
+        ${defectVisual}
 
         <p>
             ${defect.description}

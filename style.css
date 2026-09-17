@@ -218,6 +218,64 @@ button:hover {
 }
 
 /* =========================
+   DEFECT VISUALS / CREDITS
+========================= */
+
+.defect-visual {
+    margin: 0 0 20px;
+}
+
+.defect-image {
+    display: block;
+    width: 100%;
+    max-width: 625px;
+    max-height: 420px;
+    object-fit: contain;
+    background-color: #111827;
+    border: 1px solid #475569;
+    border-radius: 12px;
+}
+
+.defect-visual figcaption {
+    margin-top: 8px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.image-credit-card {
+    background: rgba(79, 179, 255, 0.07);
+    border-color: rgba(79, 179, 255, 0.28);
+}
+
+.image-credit-card h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.image-credit-card p,
+.image-credit-list {
+    color: #c8d9ea;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.image-credit-list {
+    padding-left: 22px;
+}
+
+.image-credit-list li + li {
+    margin-top: 8px;
+}
+
+.image-credit-card a {
+    color: #93c5fd;
+}
+
+.image-credit-card a:hover {
+    color: #bfdbfe;
+}
+
+/* =========================
    QUIZ / RESULTS
 ========================= */
 
