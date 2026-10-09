@@ -1,0 +1,1534 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111827;
+    color: #ffffff;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #1f2937;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 3px solid #2563eb;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 38px;
+    color: #60a5fa;
+}
+
+header p {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/* =========================
+   HOMEPAGE DASHBOARD LAYOUT
+========================= */
+
+.home-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    align-items: start;
+}
+
+/* =========================
+   LESSON PAGE LAYOUT
+========================= */
+
+.lesson-layout {
+    display: block !important;
+}
+
+.lesson-layout .card {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+    height: auto;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #60a5fa;
+}
+
+.card h3 {
+    color: #93c5fd;
+}
+
+.card h4 {
+    color: #fbbf24;
+    margin-bottom: 8px;
+}
+
+.card p {
+    line-height: 1.6;
+    color: #e5e7eb;
+}
+
+/* =========================
+   CATEGORY CARDS
+========================= */
+
+.category-card {
+    grid-column: 1 / -1;
+    background-color: #0f172a;
+    border: 2px solid #2563eb;
+}
+
+.category-card h2 {
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 17px;
+    color: #d1d5db;
+}
+
+/* =========================
+   HOMEPAGE CHECKLIST CARD
+========================= */
+
+.checklist-home-card {
+    background-color: #0f172a;
+    border: 2px solid #2563eb;
+}
+
+.checklist-home-card h2 {
+    color: #60a5fa;
+}
+
+.checklist-home-card p {
+    color: #d1d5db;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.03);
+}
+
+.card button {
+    margin-top: 15px;
+}
+
+/* =========================
+   BUTTON GROUPS
+========================= */
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+/* =========================
+   BACK / HOME BUTTON
+========================= */
+
+.home-btn,
+.back-button button {
+    margin: 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 18px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-button {
+    max-width: 1100px;
+    margin: 20px auto 0;
+    padding: 0 25px;
+}
+
+/* =========================
+   INFO BOXES
+========================= */
+
+#infoBox,
+#cycleBox,
+#parameterBox,
+#defectBox,
+#materialBox,
+#quizBox {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* =========================
+   DEFECT VISUALS / CREDITS
+========================= */
+
+.defect-visual {
+    margin: 0 0 20px;
+}
+
+.defect-image {
+    display: block;
+    width: 100%;
+    max-width: 625px;
+    max-height: 420px;
+    object-fit: contain;
+    background-color: #111827;
+    border: 1px solid #475569;
+    border-radius: 12px;
+}
+
+.defect-visual figcaption {
+    margin-top: 8px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.image-credit-card {
+    background: rgba(79, 179, 255, 0.07);
+    border-color: rgba(79, 179, 255, 0.28);
+}
+
+.image-credit-card h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.image-credit-card p,
+.image-credit-list {
+    color: #c8d9ea;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.image-credit-list {
+    padding-left: 22px;
+}
+
+.image-credit-list li + li {
+    margin-top: 8px;
+}
+
+.image-credit-card a {
+    color: #93c5fd;
+}
+
+.image-credit-card a:hover {
+    color: #bfdbfe;
+}
+
+/* =========================
+   QUIZ / RESULTS
+========================= */
+
+#quizBox button {
+    width: 100%;
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+#resultBox {
+    margin-top: 25px;
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.correct {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+/* =========================
+   QUIZ MODE BOX
+========================= */
+
+.quiz-mode-box {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.quiz-mode-label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #fbbf24;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.quiz-mode-label input {
+    width: auto;
+    transform: scale(1.2);
+}
+
+.quiz-mode-note {
+    color: #d1d5db;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.missed-question-card {
+    border-color: #dc2626;
+}
+
+/* =========================
+   WRITTEN ANSWER MODE
+========================= */
+
+.written-answer-input {
+    width: 100%;
+    min-height: 130px;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.written-answer-input:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+.written-feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.written-feedback-card {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.written-feedback-card h4 {
+    color: #fbbf24;
+    margin-top: 0;
+}
+
+.written-review-card {
+    border-color: #2563eb;
+}
+
+/* =========================
+   LISTS
+========================= */
+
+ul {
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   PROGRESS TRACKING
+========================= */
+
+.progress-card {
+    grid-column: 1 / -1;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 22px;
+    background-color: #374151;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background-color: #22c55e;
+    transition: width 0.4s ease;
+}
+
+/* =========================
+   FEEDBACK / BUG REPORT
+========================= */
+
+.feedback-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    background-color: #f59e0b;
+    color: #111827;
+    font-weight: bold;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.45);
+}
+
+.feedback-button:hover {
+    background-color: #d97706;
+}
+
+.feedback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.feedback-modal {
+    width: 100%;
+    max-width: 550px;
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.feedback-modal h2 {
+    color: #60a5fa;
+    margin-top: 0;
+}
+
+.feedback-modal label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #e5e7eb;
+    font-weight: bold;
+}
+
+.feedback-modal input,
+.feedback-modal select,
+.feedback-modal textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.feedback-modal textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.feedback-note {
+    font-size: 14px;
+    color: #d1d5db;
+    margin-top: 15px;
+}
+
+/* =========================
+   LESSON STATUS
+========================= */
+
+.lesson-status {
+    display: inline-block;
+    margin: 8px 0 14px 0;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.completed-status {
+    background-color: rgba(34, 197, 94, 0.18);
+    color: #22c55e;
+    border: 1px solid #22c55e;
+}
+
+.not-started-status {
+    background-color: rgba(156, 163, 175, 0.16);
+    color: #d1d5db;
+    border: 1px solid #6b7280;
+}
+
+/* =========================
+   SCORE CARDS
+========================= */
+
+.score-card {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 15px;
+}
+
+.score-card h3 {
+    margin-top: 0;
+    color: #93c5fd;
+}
+
+.score-card p {
+    margin: 8px 0;
+}
+
+.saved-score-message {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* =========================
+   POLYMER / MATERIAL TECH CARDS
+========================= */
+
+.polymer-tech-card {
+    background-color: #111827;
+    border: 1px solid #2563eb;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.polymer-tech-card h4 {
+    color: #fbbf24;
+    margin-top: 16px;
+}
+
+.polymer-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.polymer-tech-grid p {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 0;
+}
+
+/* =========================
+   TECH NOTE
+========================= */
+
+.tech-note {
+    margin-top: 18px;
+    padding: 16px 18px;
+    background-color: rgba(37, 99, 235, 0.10);
+    border: 1px solid #2563eb;
+    border-radius: 14px;
+    color: #dbeafe;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+/* =========================
+   LESSON TOPIC DROPDOWN
+========================= */
+
+.topic-dropdown-wrapper {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 14px;
+    padding: 18px;
+    margin: 18px 0;
+}
+
+.topic-dropdown-label {
+    display: block;
+    color: #fbbf24;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.topic-dropdown {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #374151;
+    background-color: #1f2937;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.topic-dropdown:focus {
+    outline: 2px solid #2563eb;
+}
+
+.dropdown-converted {
+    display: none;
+}
+
+/* ================================
+   PROCESS CHANGE CHECKLIST PAGE
+================================ */
+
+.checklist-page {
+    max-width: 1180px;
+    margin: 0 auto 60px;
+}
+
+.checklist-hero,
+.checklist-warning,
+.checklist-section {
+    overflow: hidden;
+}
+
+.section-intro {
+    color: #d1d5db;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.checklist-hero .section-intro,
+.checklist-warning p {
+    max-width: 950px;
+}
+
+.checklist-warning {
+    border: 1px solid #2563eb;
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.checklist-warning h2 {
+    color: #93c5fd;
+}
+
+.checklist-warning p {
+    color: #dbeafe;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label,
+.process-data-grid label {
+    color: #93c5fd;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea,
+.process-data-grid input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder,
+.process-data-grid input::placeholder {
+    color: #9ca3af;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus,
+.process-data-grid input:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.process-data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.process-data-grid > div {
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.checklist-grid label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(15, 23, 42, 0.70);
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+    padding: 14px;
+    color: #e5e7eb;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checklist-grid label span {
+    flex: 1;
+}
+
+.checklist-grid input[type="checkbox"] {
+    width: auto;
+    margin: 3px 0 0;
+    flex-shrink: 0;
+    accent-color: #2563eb;
+}
+
+.checklist-notes-grid {
+    margin-top: 18px;
+}
+
+.checklist-action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.checklist-action-buttons button {
+    width: 100%;
+    margin-top: 0;
+}
+
+.checklist-record-card {
+    border-color: #2563eb;
+}
+
+.checklist-record-card summary {
+    cursor: pointer;
+    color: #93c5fd;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.checklist-detail-box {
+    background-color: #0f172a;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 12px 0;
+}
+
+.checklist-detail-box h4 {
+    color: #93c5fd;
+    margin-bottom: 8px;
+}
+
+.process-data-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+}
+
+.process-data-summary p {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .home-layout,
+    .form-grid,
+    .process-data-grid,
+    .checklist-grid,
+    .checklist-action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .home-btn,
+    .back-button button {
+        width: calc(100% - 40px);
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .feedback-button {
+        right: 15px;
+        bottom: 15px;
+        width: calc(100% - 30px);
+    }
+
+    .checklist-page {
+        max-width: 100%;
+    }
+
+    .tech-note {
+        padding: 14px;
+    }
+
+}
+
+/* =========================
+   PRINT STYLES
+========================= */
+
+@media print {
+
+    .back-button,
+    .button-group,
+    .checklist-action-buttons,
+    .feedback-button,
+    button {
+        display: none !important;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    header,
+    .card,
+    .score-card,
+    .checklist-detail-box {
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid black !important;
+        box-shadow: none !important;
+    }
+
+    .card h2,
+    .card h3,
+    .card h4,
+    .card p,
+    .section-intro,
+    .checklist-warning p,
+    .form-field label,
+    .process-data-grid label {
+        color: black !important;
+    }
+
+}
+
+/* =========================================================
+   MOBILE FIX — PROCESS CHANGE CHECKLIST
+   Paste this at the VERY BOTTOM of style.css
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    header {
+        padding: 28px 16px;
+    }
+
+    header h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    header p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    main,
+    .lesson-layout,
+    .checklist-page {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        margin: 0;
+    }
+
+    .card,
+    .checklist-section,
+    .checklist-hero,
+    .checklist-warning {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 14px;
+    }
+
+    .card h2,
+    .checklist-section h2 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .section-intro,
+    .card p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Fix all checklist form layouts on mobile */
+
+    .form-grid,
+    .process-data-grid,
+    .checklist-grid,
+    .checklist-action-buttons {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        width: 100%;
+    }
+
+    .form-field,
+    .process-data-grid > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+
+    .form-field label,
+    .process-data-grid label,
+    .checklist-section label {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.4;
+        color: #93c5fd;
+        font-weight: 700;
+        margin: 0 0 6px 0;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea,
+    .process-data-grid input,
+    .checklist-section input[type="text"],
+    .checklist-section select,
+    .checklist-section textarea {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 13px 14px;
+        border-radius: 12px;
+        border: 1px solid #374151;
+        background-color: #0f172a;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1.4;
+        box-sizing: border-box;
+        margin: 0 0 12px 0;
+    }
+
+    .form-field textarea,
+    .written-answer-input,
+    .checklist-section textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    .full-width {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    /* Fix checkboxes so each item becomes its own clean card */
+
+    .checklist-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .checklist-grid label {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        width: 100%;
+        padding: 14px;
+        background-color: #111827;
+        border: 1px solid #374151;
+        border-radius: 12px;
+        color: #e5e7eb;
+        font-size: 16px;
+        line-height: 1.45;
+        margin: 0;
+    }
+
+    .checklist-grid label span {
+        display: block;
+        flex: 1;
+    }
+
+    .checklist-grid input[type="checkbox"],
+    .checklist-section input[type="checkbox"] {
+        width: 22px !important;
+        height: 22px !important;
+        min-width: 22px !important;
+        margin: 1px 0 0 0 !important;
+        flex-shrink: 0;
+        accent-color: #2563eb;
+    }
+
+    /* Fix save / export / delete buttons */
+
+    .checklist-action-buttons {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .checklist-action-buttons button,
+    .checklist-section button,
+    button {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 16px;
+        font-size: 16px;
+        border-radius: 12px;
+        margin-top: 0;
+        transform: none;
+    }
+
+    button:hover {
+        transform: none;
+    }
+
+    /* Fix back button */
+
+    .back-button {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 14px;
+        margin: 14px 0 0;
+    }
+
+    .home-btn,
+    .back-button button {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Stop feedback button from covering form fields on mobile */
+
+    .feedback-button {
+        position: static !important;
+        width: calc(100% - 28px) !important;
+        margin: 20px 14px !important;
+        display: block;
+        border-radius: 12px;
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+
+    /* Saved record cards */
+
+    .score-card,
+    .checklist-record-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .process-data-summary {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+
+/* ==========================================================
+   PROFESSIONAL THEME (layout + typography refresh)
+   Overrides earlier rules. Colors stay in the existing
+   slate/blue family so quiz and checklist pages still match.
+========================================================== */
+
+:root {
+    --bg: #0b1220;
+    --surface: #111a2b;
+    --surface-2: #162238;
+    --border: #243350;
+    --text: #e6ebf2;
+    --muted: #9fb0c6;
+    --accent: #3b82f6;
+    --accent-hover: #2f6fdb;
+    --ok: #22c55e;
+    --page-width: 1100px;
+    --gutter: max(24px, calc((100vw - var(--page-width)) / 2 + 25px));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Masthead ---------- */
+
+header {
+    background-color: var(--surface);
+    text-align: left;
+    padding: 52px var(--gutter) 44px;
+    border-bottom: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
+}
+
+header h1 {
+    font-size: clamp(30px, 4.5vw, 44px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+header p {
+    max-width: 62ch;
+    margin: 14px 0 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+main {
+    padding: 32px 25px 96px;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 26px;
+    box-shadow: none;
+}
+
+.card h2 {
+    font-size: 21px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #f1f5f9;
+}
+
+.card p {
+    max-width: 75ch;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.card h3 { color: #93c5fd; }
+
+/* ---------- Buttons ---------- */
+
+button {
+    background-color: var(--accent);
+    border-radius: 8px;
+    padding: 11px 18px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+    transform: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+.button-group button {
+    background-color: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-weight: 500;
+}
+
+.button-group button:hover {
+    background-color: #1d2d49;
+    border-color: var(--accent);
+}
+
+/* Back to Home */
+
+.back-button {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 22px 25px 0;
+}
+
+.home-btn,
+.back-button button {
+    margin: 0;
+    padding: 9px 14px;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.home-btn:hover,
+.back-button button:hover {
+    background-color: var(--surface-2);
+    border-color: var(--accent);
+    color: #ffffff;
+}
+
+/* ---------- Home page ---------- */
+
+.home-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.home-layout .card {
+    margin-bottom: 0;
+}
+
+/* Section headings (the old "category cards") */
+
+.home-layout .category-card {
+    grid-column: 1 / -1;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    padding: 30px 0 12px;
+}
+
+.home-layout .category-card h2 {
+    font-size: 24px;
+    margin: 0 0 6px;
+    color: #ffffff;
+}
+
+.home-layout .category-card p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--muted);
+}
+
+/* Progress card */
+
+.home-layout .card:first-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 24px;
+    align-items: center;
+    background-color: var(--surface-2);
+}
+
+.home-layout .card:first-child h2 { grid-column: 1; margin-bottom: 4px; }
+.home-layout .card:first-child p { grid-column: 1; margin: 0; font-weight: 600; color: var(--text); }
+.home-layout .card:first-child .progress-bar { grid-column: 1; }
+.home-layout .card:first-child button {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    margin: 0;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-weight: 500;
+}
+.home-layout .card:first-child button:hover {
+    border-color: #ef4444;
+    color: #fca5a5;
+    background: transparent;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #223049;
+    margin: 14px 0 4px;
+}
+
+#progressFill {
+    background-color: var(--ok);
+}
+
+/* Process Change Checklist: a tool, not a lesson */
+
+.home-layout .checklist-home-card {
+    grid-column: 1 / -1;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 22px 26px 24px;
+}
+
+.home-layout .checklist-home-card h2 {
+    font-size: 21px;
+    margin: 0 0 8px;
+    color: #f1f5f9;
+}
+
+.home-layout .checklist-home-card p {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+/* Lesson cards */
+
+.home-layout .lesson-card {
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.15s ease;
+}
+
+.home-layout .lesson-card:hover {
+    border-color: #3a5282;
+}
+
+.home-layout .lesson-card p {
+    flex: 1;
+    margin: 0 0 4px;
+    font-size: 15px;
+}
+
+.home-layout .lesson-card button,
+.home-layout .checklist-home-card button {
+    align-self: flex-start;
+    margin-top: 16px;
+}
+
+.lesson-status {
+    align-self: flex-start;
+    margin: 0 0 12px;
+    padding: 4px 11px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.completed-status {
+    background-color: rgba(34, 197, 94, 0.12);
+    border-color: rgba(34, 197, 94, 0.5);
+}
+
+.not-started-status {
+    background-color: transparent;
+    color: var(--muted);
+    border-color: var(--border);
+}
+
+/* ---------- Lesson pages ---------- */
+
+.lesson-layout .card {
+    margin-bottom: 20px;
+}
+
+#infoBox, #cycleBox, #parameterBox, #defectBox, #materialBox {
+    border-radius: 8px;
+}
+
+/* ---------- Feedback widget ---------- */
+
+.feedback-button {
+    right: 18px;
+    bottom: 18px;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.feedback-modal {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+.feedback-modal h2 { color: #ffffff; }
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 760px) {
+
+    header { padding: 36px 20px 30px; }
+
+    main { padding: 20px 16px 96px; }
+
+    .back-button { padding: 18px 16px 0; }
+
+    .home-layout { grid-template-columns: 1fr; }
+
+    .home-layout .card:first-child {
+        grid-template-columns: 1fr;
+    }
+
+    .home-layout .card:first-child button {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 14px;
+        justify-self: start;
+    }
+
+    .card { padding: 20px 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}
